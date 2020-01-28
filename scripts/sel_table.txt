@@ -1,0 +1,13 @@
+% latex table generated in R 3.5.2 by xtable 1.8-3 package
+% Tue Jan 28 14:57:20 2020
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrr}
+  \hline
+ & No Selection & Selection \\ 
+  \hline
+No Selection & 0.80 & 0.03 \\ 
+  Selection & 0.13 & 0.04 \\ 
+   \hline
+\end{tabular}
+\end{table}
