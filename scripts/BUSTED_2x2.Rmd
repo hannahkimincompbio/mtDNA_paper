@@ -1,0 +1,106 @@
+---
+title: "BUSTED_2x2"
+author: "sadie"
+date: "2/3/2020"
+output: html_document
+---
+
+load libraries
+```{r libraries, include=FALSE}
+#libraries used
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(readr)
+library(emdbook)
+library(reshape2)
+```
+
+read in data
+```{r}
+#add rate category count and order and gene for each file (can be found in file name FILE)
+
+mtDNA_SRV_2x2_2_3_2020 <- read_csv("~/bin/mtDNA_redo/data/mtDNA_SRV_2x2_2_3_2020") 
+mtDNA_SRV_2x2_2_3_2020 <- mtDNA_SRV_2x2_2_3_2020 %>% 
+  mutate(., 
+         NS.rates = 3,
+         S.rates = 3,
+         order = str_extract_all(mtDNA_SRV_2x2_2_3_2020$FILE, "\\w+(?=-)", simplify = T)[,1],
+         gene = str_extract_all(mtDNA_SRV_2x2_2_3_2020$FILE, "\\w+(?=-)", simplify = T)[,2])
+
+mtDNA_BUSTED_2x2_2_3_2020 <- read_csv("~/bin/mtDNA_redo/data/mtDNA_BUSTED_2x2_2_3_2020")
+mtDNA_BUSTED_2x2_2_3_2020<- mtDNA_BUSTED_2x2_2_3_2020 %>%  mutate(., NS.rates = 3,
+          S.rates = 3,
+          order = str_extract_all(mtDNA_BUSTED_2x2_2_3_2020$FILE, "\\w+(?=-)", simplify = T)[,1],
+            gene = str_extract_all(mtDNA_BUSTED_2x2_2_3_2020$FILE, "\\w+(?=-)", simplify = T)[,2])
+
+#these are the orders used in the original analysis
+orders_used <- read_delim("~/bin/mtDNA_redo/data/actual_orders_used.txt", delim = "\n", col_names = FALSE)
+
+```
+```{r}
+mtDNA_3x3 <- full_join(mtDNA_BUSTED_2x2_2_3_2020, mtDNA_SRV_2x2_2_3_2020, by = c("FILE", "Sites", "Sequences", "gene", "order", "NS.rates","S.rates"), suffix = c(".busted",".srv"))
+
+
+#test_row <- bind_rows(mtDNA_BUSTED_2x2_2_3_2020, mtDNA_SRV_2x2_2_3_2020)
+```
+
+```{r}
+mtDNA_3x3$gene= toupper(mtDNA_3x3$gene)
+mtDNA_3x3$order = toupper(mtDNA_3x3$order)
+
+#fix some mispellings of order names
+mtDNA_3x3$order[which(mtDNA_3x3$order == "CHIMAERIFORMS")]= "CHIMAERIFORMES"
+mtDNA_3x3$order[which(mtDNA_3x3$order == "CARNIVORES")] <-"CARNIVORA"
+mtDNA_3x3$order[which(mtDNA_3x3$order == "GASTEROSTEIFORMES")] <-"GASTEROSTEALES"
+```
+
+```{r}
+#filter based on orders previously used:
+mtDNA_3x3 <- mtDNA_3x3 %>% filter(order %in% orders_used$X1)
+```
+
+
+
+```{r}
+syn_labels <- list("Synonymous.CV"="A) Synonymous CV",
+                   "NS.CV" = "B) Nonsynoymous CV BUSTED[S]",
+                   "CV.NSRV.busted" = "C) Nonsynoymous CV BUSTED")
+
+syn_labeller <- function(variable,value){
+  return(syn_labels[value])
+}
+```
+
+boxplots of the CVs grouped by genes
+```{r}
+num_orders_per_gene = mtDNA_3x3  %>% count(gene)
+gene_boxplots <- mtDNA_3x3 %>% select(CV.SRV, CV.NSRV.srv, CV.NSRV.busted,gene)
+gene_boxplots <-gene_boxplots %>% melt(id.vars = "gene")
+
+
+
+
+gene_boxplots %>%ggplot(aes(gene, value))+
+  geom_boxplot()+ facet_grid(~variable,labeller = syn_labeller)+
+  #coord_cartesian(ylim = c(0,3.5))+
+  ylab("CV")+xlab("Gene")+ theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  scale_x_discrete(labels = paste(num_orders_per_gene$gene, num_orders_per_gene$n, sep = " N = "))
+
+```
+
+```{r}
+mtDNA_3x3 %>% ggplot()+geom_point(aes(CV.SRV, CV.NSRV.srv))+ xlab("Synonymous CV")+
+  ylab("Nonsynonymous CV")+ theme_bw()+
+  geom_abline(slope = 1, intercept = 0, color = 'blue') +
+  geom_abline(slope = 2, intercept = 0,color='red', linetype = "dashed" )
+#+
+ # coord_cartesian(ylim = c(0,3.5), xlim = c(0,1.65))
+```
+
+```{r}
+source("/Volumes/GoogleDrive/My Drive/BUSTED-SRV/R/useful_functions.R")
+gen.sig.table(mtDNA_3x3)
+```
+
