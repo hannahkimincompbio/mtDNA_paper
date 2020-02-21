@@ -1,5 +1,5 @@
 ---
-title: "BUSTED_2x2"
+title: "BUSTED_4x4"
 author: "sadie"
 date: "2/3/2020"
 output:
@@ -22,19 +22,19 @@ read in data
 ```{r}
 #add rate category count and order and gene for each file (can be found in file name FILE)
 
-mtDNA_SRV_2x2_2_3_2020 <- read_csv("~/bin/mtDNA_redo/data/mtDNA_SRV_2x2_2_3_2020") 
-mtDNA_SRV_2x2_2_3_2020 <- mtDNA_SRV_2x2_2_3_2020 %>% 
+mtDNA_SRV_4x4_2_20_2020 <- read_csv("~/bin/mtDNA_redo/data/mtDNA_SRV_4x4_2_20_2020") 
+mtDNA_SRV_4x4_2_20_2020 <- mtDNA_SRV_4x4_2_20_2020 %>% 
   mutate(., 
          NS.rates = 2,
          S.rates =2,
-         order = str_extract_all(mtDNA_SRV_2x2_2_3_2020$FILE, "\\w+(?=-)", simplify = T)[,1],
-         gene = str_extract_all(mtDNA_SRV_2x2_2_3_2020$FILE, "\\w+(?=-)", simplify = T)[,2])
+         order = str_extract_all(mtDNA_SRV_4x4_2_20_2020$FILE, "\\w+(?=-)", simplify = T)[,1],
+         gene = str_extract_all(mtDNA_SRV_4x4_2_20_2020$FILE, "\\w+(?=-)", simplify = T)[,2])
 
-mtDNA_BUSTED_2x2_2_3_2020 <- read_csv("~/bin/mtDNA_redo/data/mtDNA_BUSTED_2x2_2_3_2020")
-mtDNA_BUSTED_2x2_2_3_2020<- mtDNA_BUSTED_2x2_2_3_2020 %>%  mutate(., NS.rates = 2,
+mtDNA_BUSTED_4x4_2_20_2020 <- read_csv("~/bin/mtDNA_redo/data/mtDNA_BUSTED_4x4_2_20_2020")
+mtDNA_BUSTED_4x4_2_20_2020<- mtDNA_BUSTED_4x4_2_20_2020 %>%  mutate(., NS.rates = 2,
           S.rates = 2,
-          order = str_extract_all(mtDNA_BUSTED_2x2_2_3_2020$FILE, "\\w+(?=-)", simplify = T)[,1],
-            gene = str_extract_all(mtDNA_BUSTED_2x2_2_3_2020$FILE, "\\w+(?=-)", simplify = T)[,2])
+          order = str_extract_all(mtDNA_BUSTED_4x4_2_20_2020$FILE, "\\w+(?=-)", simplify = T)[,1],
+            gene = str_extract_all(mtDNA_BUSTED_4x4_2_20_2020$FILE, "\\w+(?=-)", simplify = T)[,2])
 
 #these are the orders used in the original analysis
 orders_used <- read_delim("~/bin/mtDNA_redo/data/actual_orders_used.txt", delim = "\n", col_names = FALSE)
@@ -42,25 +42,25 @@ orders_used <- read_delim("~/bin/mtDNA_redo/data/actual_orders_used.txt", delim 
 ```
 
 ```{r}
-mtDNA_2x2 <- full_join(mtDNA_BUSTED_2x2_2_3_2020, mtDNA_SRV_2x2_2_3_2020, by = c("FILE", "Sites", "Sequences", "gene", "order", "NS.rates","S.rates"), suffix = c(".busted",".srv"))
+mtDNA_4x4 <- full_join(mtDNA_BUSTED_4x4_2_20_2020, mtDNA_SRV_4x4_2_20_2020, by = c("FILE", "Sites", "Sequences", "gene", "order", "NS.rates","S.rates"), suffix = c(".busted",".srv"))
 
 
-#test_row <- bind_rows(mtDNA_BUSTED_2x2_2_3_2020, mtDNA_SRV_2x2_2_3_2020)
+#test_row <- bind_rows(mtDNA_BUSTED_4x4_2_20_2020, mtDNA_SRV_4x4_2_20_2020)
 ```
 
 ```{r}
-mtDNA_2x2$gene= toupper(mtDNA_2x2$gene)
-mtDNA_2x2$order = toupper(mtDNA_2x2$order)
+mtDNA_4x4$gene= toupper(mtDNA_4x4$gene)
+mtDNA_4x4$order = toupper(mtDNA_4x4$order)
 
 #fix some mispellings of order names
-mtDNA_2x2$order[which(mtDNA_2x2$order == "CHIMAERIFORMS")]= "CHIMAERIFORMES"
-mtDNA_2x2$order[which(mtDNA_2x2$order == "CARNIVORES")] <-"CARNIVORA"
-mtDNA_2x2$order[which(mtDNA_2x2$order == "GASTEROSTEIFORMES")] <-"GASTEROSTEALES"
+mtDNA_4x4$order[which(mtDNA_4x4$order == "CHIMAERIFORMS")]= "CHIMAERIFORMES"
+mtDNA_4x4$order[which(mtDNA_4x4$order == "CARNIVORES")] <-"CARNIVORA"
+mtDNA_4x4$order[which(mtDNA_4x4$order == "GASTEROSTEIFORMES")] <-"GASTEROSTEALES"
 ```
 
 ```{r}
 #filter based on orders previously used:
-mtDNA_2x2 <- mtDNA_2x2 %>% filter(order %in% orders_used$X1)
+mtDNA_4x4 <- mtDNA_4x4 %>% filter(order %in% orders_used$X1)
 ```
 
 
@@ -77,8 +77,8 @@ syn_labeller <- function(variable,value){
 
 boxplots of the CVs grouped by genes
 ```{r}
-num_orders_per_gene = mtDNA_2x2  %>% count(gene)
-gene_boxplots <- mtDNA_2x2 %>% select(CV.SRV, CV.NSRV.srv, CV.NSRV.busted,gene)
+num_orders_per_gene = mtDNA_4x4  %>% count(gene)
+gene_boxplots <- mtDNA_4x4 %>% select(CV.SRV, CV.NSRV.srv, CV.NSRV.busted,gene)
 gene_boxplots <-gene_boxplots %>% melt(id.vars = "gene")
 
 
@@ -94,7 +94,7 @@ gene_boxplots %>%ggplot(aes(gene, value))+
 ```
 
 ```{r}
-mtDNA_2x2 %>% ggplot()+geom_point(aes(CV.SRV, CV.NSRV.srv))+ xlab("Synonymous CV")+
+mtDNA_4x4 %>% ggplot()+geom_point(aes(CV.SRV, CV.NSRV.srv))+ xlab("Synonymous CV")+
   ylab("Nonsynonymous CV")+ theme_bw()+
   geom_abline(slope = 1, intercept = 0, color = 'blue') +
   geom_abline(slope = 2, intercept = 0,color='red', linetype = "dashed" )
@@ -104,6 +104,6 @@ mtDNA_2x2 %>% ggplot()+geom_point(aes(CV.SRV, CV.NSRV.srv))+ xlab("Synonymous CV
 
 ```{r}
 source("/Volumes/GoogleDrive/My Drive/BUSTED-SRV/R/useful_functions.R")
-gen.sig.table(mtDNA_2x2)
+gen.sig.table(mtDNA_4x4)
 ```
 

@@ -16,6 +16,8 @@ library(ggplot2)
 library(readr)
 library(emdbook)
 library(reshape2)
+library(ape)
+library(phytools)
 ```
 
 read in data
@@ -105,4 +107,84 @@ mtDNA_3x3 %>% ggplot()+geom_point(aes(CV.SRV, CV.NSRV.srv))+ xlab("Synonymous CV
 source("/Volumes/GoogleDrive/My Drive/BUSTED-SRV/R/useful_functions.R")
 gen.sig.table(mtDNA_3x3)
 ```
+
+boxplots via order tree
+```{r}
+#read u=in the tree with ape
+class.order.tree <- read.tree(file = "~/bin/mtDNA_redo/data/phyliptree_order_class.phy")
+tip_labels = toupper(class.order.tree$tip.label)
+class.order.tree$tip.label <- tip_labels
+mtDNA_3x3$order <-factor(mtDNA_3x3$order, levels = tip_labels)
+Syn.CV.mtDNA_3x3= mtDNA_3x3 %>% select(CV.SRV)
+names.Syn.CV.mtDNA_3x3 = mtDNA_3x3 %>% select(order)
+
+Syn.CV.mtDNA_3x3 = as.vector(as.matrix(Syn.CV.mtDNA_3x3))
+names.Syn.CV.mtDNA_3x3 = as.vector(as.matrix(names.Syn.CV.mtDNA_3x3))
+# for(i in 1:length(new_labels)){
+# names.Syn.CV.mtDNA_3x3   =str_replace_all(names.Syn.CV.mtDNA_3x3, pattern=num_genes_per_order$Order[i],new_labels[i])
+# }
+names(Syn.CV.mtDNA_3x3) = names.Syn.CV.mtDNA_3x3
+
+NonSyn.CV.mtDNA_3x3 = mtDNA_3x3 %>% select(CV.NSRV.srv)
+names.nonSyn.CV.mtDNA_3x3 = mtDNA_3x3 %>% select(order)
+
+NonSyn.CV.mtDNA_3x3 = as.vector(as.matrix(NonSyn.CV.mtDNA_3x3))
+names.nonSyn.CV.mtDNA_3x3 = as.vector(as.matrix(names.nonSyn.CV.mtDNA_3x3))
+names(NonSyn.CV.mtDNA_3x3) = names.Syn.CV.mtDNA_3x3
+
+#pdf("tree.pdf", height = 11, width = 8.5)
+plotTree(class.order.tree)
+#dev.off()
+
+#win.metafile("Images/tree.wmf", height = 11, width = 8.5)
+plotTree(class.order.tree)
+#dev.off()
+
+class.order.tree$edge.length =NULL
+#generate SYNCV tree and box plot
+#png(filename = "Images/tree_syn_order.png", width = 500, height = 800)
+plotTree.boxplot(class.order.tree, Syn.CV.mtDNA_3x3,
+                 args.plotTree = list(fsize = c(0.6)),
+                 args.boxplot=list(main = "Synonymous CV 7x10", xlab = "CV"))
+#dev.off()
+#generate nonsynCV tree and box plot
+#png(filename = "Images/tree_nonsyn_order.png",width = 500, height = 800)
+plotTree.boxplot(class.order.tree, NonSyn.CV.mtDNA_3x3, 
+                 args.plotTree = list(fsize = 0.6),
+                 args.boxplot=list(main = "Nonsynonymous CV 7x10"))
+#dev.off()
+
+```
+
+```{r}
+###order boxplots w/o tree
+num_gene_per_order <- mtDNA_3x3 %>% count(order)
+order_boxplots <-mtDNA_3x3 %>% select(CV.SRV, CV.NSRV.srv, order)
+order_boxplots <- order_boxplots %>% melt(id.vars = "order")
+
+syn_labels <- list("Synonymous.CV"="A) Synonymous CV",
+                   "NS.CV" = "B) Nonsynoymous CV")
+
+syn_labeller <- function(variable,value){
+  return(syn_labels[value])
+}
+
+#png(filename = "Images/no_tree_order_boxplots.png", height = 6, width = 8,res = 700, units="in")
+order_boxplots %>%ggplot(aes(order, value))+
+  geom_boxplot()+ facet_wrap(~variable,labeller = syn_labeller, nrow = 2)+
+  #coord_cartesian(ylim = c(0,3.5))+
+  theme_bw()+ ylab("CV")+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  scale_x_discrete(labels = paste(num_gene_per_order$order, num_gene_per_order$n, sep = " N = "))
+#dev.off()
+
+#win.metafile(filename = "Images/no_tree_order_boxplots.wmf", height = 6, width = 10)
+order_boxplots %>%ggplot(aes(Order, value))+
+  geom_boxplot()+ facet_wrap(~variable,labeller = syn_labeller, nrow = 2)+coord_cartesian(ylim = c(0,3.5))+
+  theme_bw()+ ylab("CV")+
+theme(axis.text.x = element_text(angle = 65, vjust = 1, hjust=1))+
+  scale_x_discrete(labels =num_gene_per_order$Order)
+#dev.off()
+```
+
 
