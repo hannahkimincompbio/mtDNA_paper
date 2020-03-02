@@ -207,3 +207,71 @@ mtDNA_3x3 %>% ggplot()+geom_point(aes(CV.SRV, BUSTED.P))+ xlab("Synonymous CV")+
 ```
 
 
+# Likelihood ratio calculation for Unconstrained log likelihood between BUSTED (H0) and BUSTED[S] (HA)
+```{r}
+stats = data.frame(File = "",order ="", gene = "", LRT.D = as.numeric(NA), p = as.numeric(NA), stringsAsFactors = F)
+
+#stats =data.frame(File = files, LRT.D = as.numeric(NA), p = as.numeric(NA), stringsAsFactors = F )
+
+#need to make sure things match up 
+k=1
+n=1
+for(n in seq(1,nrow(mtDNA_3x3)-1,by=1)){
+  
+  D = -2*(mtDNA_3x3$BUSTED.UNLogL[n]-mtDNA_3x3$BUSTED.SRV.UNLogL[n])
+  if(as.numeric(D) >= 0 ){
+  p =1-pchibarsq(as.numeric(D), df = 1, mix =0.5)
+  }
+  stats[k,] = c(mtDNA_3x3$FILE[n],mtDNA_3x3$order[n],mtDNA_3x3$gene[n], D, p)
+ D = NA
+ p = NA
+  k=k+1
+}
+stats$LRT.D = as.numeric(stats$LRT.D)
+stats$p = as.numeric(stats$p)
+#stats = stats %>% mutate(sort = paste(File, sep = "_"))
+
+print(stats)
+
+```
+```{r}
+#set up crit values
+N <- nrow(stats)/3
+crit.p.05 <- 0.05/N
+crit.p.01 <- 0.01/N
+
+
+#number of sig datasets
+stats %>% filter(p <= crit.p.01)  %>%nrow
+stats %>% filter(p <= crit.p.05)  %>%nrow
+
+#make sig table
+sig_table <- stats %>% select(order,gene, p)
+
+#sig_table <- mutate(sig_table,fill = "NA")
+
+sig_table <- mutate(sig_table,fill = "-",ordering = "-",text_size="a")
+
+sig_table$fill[which(sig_table$p>crit.p.05)] <- "-"
+sig_table$fill[which(sig_table$p<=crit.p.05)] <-  "*"  #"Sig at alpha = 0.05"
+sig_table$fill[which(sig_table$p<=crit.p.01)] <- "**" #"Sig at alpha = 0.01"
+
+sig_table$ordering[which(sig_table$p>crit.p.05)] <- "-"
+sig_table$ordering[which(sig_table$p<=crit.p.05)] <- "*"
+sig_table$ordering[which(sig_table$p<=crit.p.01)] <- "**"
+
+sig_table$text_size[which(!is.na(sig_table$ordering))] <-"b"
+
+tip_labels = toupper(class.order.tree$tip.label)
+sig_table$order = factor(sig_table$order, levels = tip_labels)
+
+sig_table %>% ggplot(aes(x=order,y=gene, fill = ordering))+
+  geom_tile(size =0.5,na.rm=TRUE,color="black")+ 
+  scale_fill_manual(values = c("#FFFFFF","#CCCCCC","#999999"))+
+  geom_text(aes(label =fill,size=text_size))+ scale_size_manual(values = c(1.75,3),guide =FALSE)+
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.major.x = element_blank(),
+        axis.text.x = element_text(angle = 90, vjust = 1, hjust=1))+
+  coord_fixed(ratio=1)
+```
+
