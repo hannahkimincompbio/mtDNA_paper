@@ -54,10 +54,18 @@ mtDNA_3x3$gene= toupper(mtDNA_3x3$gene)
 mtDNA_3x3$order = toupper(mtDNA_3x3$order)
 
 #fix some mispellings of order names
-mtDNA_3x3$order[which(mtDNA_3x3$order == "CHIMAERIFORMS")]= "CHIMAERIFORMES"
+mtDNA_3x3$order[which(mtDNA_3x3$order == "CHIMAERIFORMS")]<-"CHIMAERIFORMES"
 mtDNA_3x3$order[which(mtDNA_3x3$order == "CARNIVORES")] <-"CARNIVORA"
 mtDNA_3x3$order[which(mtDNA_3x3$order == "GASTEROSTEIFORMES")] <-"GASTEROSTEALES"
 ```
+
+how many genes per orders originally
+```{r}
+count(mtDNA_3x3, groups = order) -> temp
+temp
+temp %>% filter(n >=12)
+```
+
 
 ```{r}
 #filter based on orders previously used:
@@ -179,12 +187,23 @@ order_boxplots %>%ggplot(aes(order, value))+
 #dev.off()
 
 #win.metafile(filename = "Images/no_tree_order_boxplots.wmf", height = 6, width = 10)
-order_boxplots %>%ggplot(aes(Order, value))+
+order_boxplots %>%ggplot(aes(order, value))+
   geom_boxplot()+ facet_wrap(~variable,labeller = syn_labeller, nrow = 2)+coord_cartesian(ylim = c(0,3.5))+
   theme_bw()+ ylab("CV")+
 theme(axis.text.x = element_text(angle = 65, vjust = 1, hjust=1))+
   scale_x_discrete(labels =num_gene_per_order$Order)
 #dev.off()
+```
+
+```{r}
+mtDNA_3x3 %>% ggplot()+geom_point(aes(CV.SRV, BUSTED.SRV.P))+ xlab("Synonymous CV")+
+  ylab("BUSTED[S] P")+ theme_bw()
+
+mtDNA_3x3 %>% ggplot()+geom_point(aes(CV.NSRV.srv, BUSTED.SRV.P))+ xlab("Nonsynonymous CV")+
+  ylab("BUSTED[S] P")+ theme_bw()
+
+mtDNA_3x3 %>% ggplot()+geom_point(aes(CV.SRV, BUSTED.P))+ xlab("Synonymous CV")+
+  ylab("BUSTED P")+ theme_bw()
 ```
 
 
