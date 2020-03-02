@@ -1,0 +1,453 @@
+{
+ "MLE":{
+   "content":{
+     "0":      [
+[9980.0527489859, 0.009633219596088968, 0.02334607928033651, 15.98485210170453, 6.385134008057847e-05, 250800.2518413429],
+      [0.5242870379001909, 0.008859040340173251, 0.0276392880291127, 13.37427024816949, 0.0002550998668643389, 14.38425698488746],
+      [11.33681119862002, 0.005492001403203928, 0.01964578983181139, 21.65416450301375, 3.265003775232422e-06, 285.6437493468356],
+      [0.4486013745852905, 0.009727230142044362, 0.01234780652113714, 2.395919900150311, 0.1216521704575045, 12.60074862038027],
+      [0.1638481219283507, 0.07512202717497157, 0.08465856312797669, 0.6439842831583178, 0.4222717024219947, 14.36872607431263],
+      [1.841329782392172, 0.01360227735108414, 0.0357390099289016, 15.51840745173973, 8.170573277210824e-05, 48.12883547405755],
+      [2.475732518331129, 0.05533861387904075, 0.06591348986383219, 3.651610370097927, 0.05601502643409095, 69.7667676510373],
+      [0, 0.09048673477588785, 0.07919365900673955, 1.705074519962523, 0.1916256755475021, 12.3479010927402],
+      [1.169714777374984, 0.01274610155833484, 0.01522126740266385, 1.334586935636526, 0.2479908336982575, 31.13430163376373],
+      [0.3960343368679929, 0.04802474109855391, 0.06580822090372059, 2.320410880266209, 0.1276862946803672, 16.50585058720115],
+      [5.030143885071618, 0.05855835962584674, 0.09425371194745509, 4.783791581970661, 0.02872879862659194, 134.3985488788203],
+      [2.069624182692087, 0.07033068633518363, 0.08740188605048924, 0.3796762243111118, 0.5377765665901891, 61.60708823346299],
+      [8.553338103239364, 0.08034093400704401, 0.1546121812853729, 6.179036667987361, 0.01292726396753574, 225.9089639797816],
+      [2.584116943699422, 0.04671637589473462, 0.06476169899041452, 5.35099869387885, 0.02071040484704267, 71.31387222076016],
+      [4.067554454054251, 0.09300535279799967, 0.4891435469802376, 5.970950240974148, 0.01454344170162736, 114.9093236832269],
+      [1.140174151843609, 0.04845961173207591, 0.08637861922063243, 10.93401625888589, 0.0009441460302821447, 35.26544275978225],
+      [0.5791629252125314, 0.09910521067415463, 0.1140769638276001, 1.238573915182528, 0.2657460723022811, 28.07836265004862],
+      [0.4156437937234307, 0.09850436883776714, 0.1174794435882131, 1.638639745546328, 0.2005122027165952, 23.88713199048009],
+      [0.6554367965347134, 0.05119976950905359, 0.08290732382002329, 5.228062652715408, 0.02222527454613199, 23.45790712954943],
+      [0.0985249447803296, 0.03264911981254717, 0.03666949953357878, 0.6254338300194675, 0.4290351787882432, 6.931262163751645],
+      [3.633493785817303, 0.08240828259214365, 0.1005587654379382, 2.194375234197622, 0.1385153618370549, 102.5552841655225],
+      [0, 0.04449826975460158, 0.0420569092289813, 1.420262428532411, 0.2333602135243736, 6.072273854159546],
+      [2.521305886230381, 0.06723009268513654, 0.122698446190466, 9.481831276810397, 0.002075167225215169, 72.53474923056584],
+      [0.8658678724441642, 0.08106070079810182, 0.1115345547734077, 2.181091085499361, 0.1397153816824196, 32.82089403242028],
+      [1.037989857723749, 0.1106572490930527, 0.09241758787448655, 0.3205799692638323, 0.5712593130199951, 41.18509473431808],
+      [3.019255438160896, 0.101364470865727, 0.1274194047719776, 3.94610232801449, 0.04698006432623325, 89.70623993558125],
+      [0.2415358487230241, 0.06084564874029412, 0.0698030750711033, 0.7929203952923274, 0.3732185204604233, 14.37285287394368],
+      [7.121775475896461, 0.03322757788222551, 0.07254567193888944, 18.14621138749293, 2.045760248503559e-05, 183.5046338988589],
+      [1.295834919941361, 0.03255668042981946, 0.05408169417766594, 8.059857513858262, 0.004525674268654578, 37.00707287625963],
+      [1.085514730203086, 0.06927470262804659, 0.08504379149596815, 2.522966225858895, 0.1121993558752473, 36.73229633198182],
+      [0.2500765745942021, 0.1127651284132802, 0.1506523264949809, 0.6071926557216045, 0.4358467871345411, 21.6724603207922],
+      [1.087557261584845, 0.1432894086235944, 0.2605428247040859, 2.505006565353597, 0.1134850120208134, 46.88373844094491],
+      [1.310103825343192, 0.1251313847221552, 0.1467421459718904, 2.05798371885551, 0.1514104006381172, 49.99847805982532],
+      [2.245894263310686, 0.6402643307287378, 0.9012797353188834, 0.2626464084706583, 0.608307838474488, 143.8104160641253],
+      [0.1127377516612689, 0.2040078011624125, 0.1833207792718674, 0.1664113581804259, 0.6833210416848668, 30.67218985466186],
+      [1.346784588167957, 0.1297563014686089, 0.2316336970726076, 3.141814763059969, 0.07630885785522568, 51.55138670051321],
+      [0.6559581281386262, 0.1144272890982051, 0.1397872008759707, 1.076292903134203, 0.2995283415974104, 32.09909231094683],
+      [0.2238804972154308, 0.07894254983861382, 0.08621298007974808, 0.2779228054216389, 0.5980659268446538, 16.39869289256512],
+      [9999.999999998339, 0.09169332752654563, 0.101337732707006, 0.7105601138662792, 0.3992579304140204, 251312.7246784416],
+      [0.07611418858227513, 0.1282546012910251, 0.1203621162672857, 0.05117260308031746, 0.8210352758705922, 19.41448924997749],
+      [0.7243853204586259, 0.06900928847858037, 0.08027209661752321, 0.983442419825721, 0.3213504034226349, 27.62088795145631],
+      [6.556168961705223, 0.1052232402523734, 0.1463967584257416, 4.245519588189822, 0.03935402571219004, 179.1155229449317],
+      [1.80401881212404, 0.1225769106145548, 0.164468805986809, 2.349720928874532, 0.1253054379181926, 62.06198632391234],
+      [2.106752110063034, 0.123283956306227, 0.1501223585781087, 2.562996686044627, 0.1093910529085036, 69.76616461291523],
+      [0.8899066449894748, 0.1034889436261063, 0.1317736156445562, 2.158186795912385, 0.1418119456711394, 36.48556705529343],
+      [0.1487514557906502, 0.4076960923362855, 0.3329709768429966, 0.1781082951998627, 0.673004007275287, 59.37270214735637],
+      [6.975202081216895, 0.1909065781801614, 0.3008740920539485, 1.123230274826412, 0.2892239540497443, 201.3382593719521],
+      [0, 0.1798517330995122, 0.1689146810351022, 1.668534720486718, 0.196454911619006, 24.54272902178435],
+      [5.130239483177354, 0.09799845474537532, 0.1678857879190376, 6.349843238967495, 0.01173916706384059, 142.2959841832539],
+      [9999.999999998339, 0.09566338528460576, 0.1111521168146264, 3.095759512065499, 0.0784965138884226, 251313.2664360886],
+      [0, 0.09936691566393945, 0.09785566443193731, 0.8819538554477617, 0.3476670921594905, 13.55969855192449],
+      [9999.999999998339, 0.1206977485989646, 8.377902093320273, 2.330656689718822, 0.1268483546936539, 251316.6826477897],
+      [1.097904026607802, 0.07019269724445118, 0.08347769903739631, 1.775011774270801, 0.1827630468017816, 37.16890998323616],
+      [1.129870864485779, 0.1047188565679145, 0.1253325374211959, 0.4596512796923768, 0.4977869932037388, 42.68370800607995],
+      [0, 0.3142270586145116, 2.614537377868043, 0.1717205614451132, 0.6785871954630993, 42.87970662268377],
+      [0.5300715945173901, 0.1338611948991253, 0.303613530194409, 0.1295754402303402, 0.7188726437253413, 31.58752928966941],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0] 
+      ]
+    },
+   "headers":    [
+["alpha", "Synonymous substitution rate at a site"],
+    ["beta", "Non-synonymous substitution rate at a site"],
+    ["alpha=beta", "The rate estimate under the neutral model"],
+    ["LRT", "Likelihood ration test statistic for beta = alpha, versus beta &neq; alpha"],
+    ["p-value", "Asymptotic p-value for evidence of selection, i.e. beta &neq; alpha"],
+    ["Total branch length", "The total length of branches contributing to inference at this site, and used to scale dN-dS"] 
+    ]
+  },
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond and Simon DW Frost",
+   "citation":"Not So Different After All: A Comparison of Methods for Detecting Amino Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222",
+   "contact":"spond@temple.edu",
+   "info":"FEL (Fixed Effects Likelihood)\n    estimates site-wise synonymous (&alpha;) and non-synonymous (&beta;) rates, and\n    uses a likelihood ratio test to determine if beta &neq; alpha at a site.\n    The estimates aggregate information over all branches,\n    so the signal is derived from\n    pervasive diversification or conservation. A subset of branches can be selected\n    for testing as well, in which case an additional (nuisance) parameter will be\n    inferred -- the non-synonymous rate on branches NOT selected for testing.\n    Multiple partitions within a NEXUS file are also supported\n    for recombination - aware analysis.\n    ",
+   "requirements":"in-frame codon alignment and a phylogenetic tree",
+   "version":"2.1"
+  },
+ "branch attributes":{
+   "0":{
+     "ABISPA_EPHIPPIUM":{
+       "Global MG94xREV":3.089274253974696,
+       "Nucleotide GTR":0.6817993570666286
+      },
+     "APIS_CERANA":{
+       "Global MG94xREV":0.4143619942137923,
+       "Nucleotide GTR":0.1878508237394836
+      },
+     "APIS_MELLIFERA_LIGUISTICA":{
+       "Global MG94xREV":1.002506082850845,
+       "Nucleotide GTR":0.3240518260986802
+      },
+     "Abispa_ephippium":{
+       "original name":"Abispa_ephippium"
+      },
+     "Apis_cerana":{
+       "original name":"Apis_cerana"
+      },
+     "Apis_mellifera_liguistica":{
+       "original name":"Apis_mellifera_liguistica"
+      },
+     "BOMBUS_HYPOCRITA_SAPPOROENSIS":{
+       "Global MG94xREV":0.2637394756604515,
+       "Nucleotide GTR":0.1054039511228373
+      },
+     "BOMBUS_IGNITUS":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0
+      },
+     "Bombus_hypocrita_sapporoensis":{
+       "original name":"Bombus_hypocrita_sapporoensis"
+      },
+     "Bombus_ignitus":{
+       "original name":"Bombus_ignitus"
+      },
+     "CEPHUS_CINCTUS":{
+       "Global MG94xREV":1.874619424849495,
+       "Nucleotide GTR":0.4893303919988948
+      },
+     "COTESIA_VESTALIS":{
+       "Global MG94xREV":2.002627223443675,
+       "Nucleotide GTR":0.3897718258211461
+      },
+     "Cephus_cinctus":{
+       "original name":"Cephus_cinctus"
+      },
+     "Cotesia_vestalis":{
+       "original name":"Cotesia_vestalis"
+      },
+     "DIADEGMA_SEMICLAUSUM":{
+       "Global MG94xREV":1.131977050707336,
+       "Nucleotide GTR":0.2312324241316604
+      },
+     "Diadegma_semiclausum":{
+       "original name":"Diadegma_semiclausum"
+      },
+     "EVANIA_APPENDIGASTER":{
+       "Global MG94xREV":3.047914840985441,
+       "Nucleotide GTR":0.9398399786413882
+      },
+     "Evania_appendigaster":{
+       "original name":"Evania_appendigaster"
+      },
+     "MELIPONA_BICOLOR":{
+       "Global MG94xREV":1.636257148840021,
+       "Nucleotide GTR":0.3757395734915622
+      },
+     "Melipona_bicolor":{
+       "original name":"Melipona_bicolor"
+      },
+     "Node10":{
+       "Global MG94xREV":0.5125362305304413,
+       "Nucleotide GTR":0.1095491577861037
+      },
+     "Node12":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0
+      },
+     "Node15":{
+       "Global MG94xREV":0.8393439491554106,
+       "Nucleotide GTR":0.1903607698525549
+      },
+     "Node18":{
+       "Global MG94xREV":0.07319701815107603,
+       "Nucleotide GTR":0.02746864197709509
+      },
+     "Node20":{
+       "Global MG94xREV":0.3349676721324951,
+       "Nucleotide GTR":0.1151284560320009
+      },
+     "Node22":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0
+      },
+     "Node25":{
+       "Global MG94xREV":0.8786394095777567,
+       "Nucleotide GTR":0.1493415776218809
+      },
+     "Node27":{
+       "Global MG94xREV":0.04297663647038639,
+       "Nucleotide GTR":0.02549147404193534
+      },
+     "Node29":{
+       "Global MG94xREV":0.1783647296197107,
+       "Nucleotide GTR":0
+      },
+     "Node3":{
+       "Global MG94xREV":0.1884871682608107,
+       "Nucleotide GTR":0.1478828627468571
+      },
+     "Node31":{
+       "Global MG94xREV":3.504955233390316,
+       "Nucleotide GTR":0.7353957517411749
+      },
+     "Node5":{
+       "Global MG94xREV":2.179581258036136,
+       "Nucleotide GTR":0.5990887555955267
+      },
+     "Node7":{
+       "Global MG94xREV":1.352595439245243,
+       "Nucleotide GTR":0.410418860243206
+      },
+     "Node8":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0.0472980832043196
+      },
+     "Node9":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0
+      },
+     "ORUSSUS_OCCIDENTALIS":{
+       "Global MG94xREV":1.558652535273764,
+       "Nucleotide GTR":0.516315352913382
+      },
+     "Orussus_occidentalis":{
+       "original name":"Orussus_occidentalis"
+      },
+     "PRISTOMYRMEX_PUNCTATUS":{
+       "Global MG94xREV":1.23165396711297,
+       "Nucleotide GTR":0.2703341776710834
+      },
+     "Pristomyrmex_punctatus":{
+       "original name":"Pristomyrmex_punctatus"
+      },
+     "RADOSZKOWSKIUS_OCULATA":{
+       "Global MG94xREV":3.119980765995728,
+       "Nucleotide GTR":0.5778483099630546
+      },
+     "Radoszkowskius_oculata":{
+       "original name":"Radoszkowskius_oculata"
+      },
+     "SOLENOPSIS_GEMINATA":{
+       "Global MG94xREV":0.3520109474346282,
+       "Nucleotide GTR":0.1281442627863565
+      },
+     "SOLENOPSIS_INVICTA":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0.003891384762902368
+      },
+     "SOLENOPSIS_RICHTERI":{
+       "Global MG94xREV":0.01828865174235854,
+       "Nucleotide GTR":0.01534194542206585
+      },
+     "SPATHIUS_AGRILI":{
+       "Global MG94xREV":1.841764745717207,
+       "Nucleotide GTR":0.417943226109773
+      },
+     "Solenopsis_geminata":{
+       "original name":"Solenopsis_geminata"
+      },
+     "Solenopsis_invicta":{
+       "original name":"Solenopsis_invicta"
+      },
+     "Solenopsis_richteri":{
+       "original name":"Solenopsis_richteri"
+      },
+     "Spathius_agrili":{
+       "original name":"Spathius_agrili"
+      },
+     "VANHORNIA_EUCEMIDARUM":{
+       "Global MG94xREV":1.939502507787786,
+       "Nucleotide GTR":0.479333819928272
+      },
+     "Vanhornia_eucemidarum":{
+       "original name":"Vanhornia_eucemidarum"
+      }
+    },
+   "attributes":{
+     "Global MG94xREV":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      }
+    }
+  },
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59] 
+      ],
+     "name":"fel.filter.default"
+    }
+  },
+ "fits":{
+   "Global MG94xREV":{
+     "AIC-c":4908.956936572743,
+     "Equilibrium frequencies":      [
+[0.08710060684407982],
+      [0.01557541609082492],
+      [0.0026295522148418],
+      [0.06006263520908098],
+      [0.03289730731117398],
+      [0.005882728814467478],
+      [0.0009931640023735219],
+      [0.02268524916168683],
+      [0.0191478059337382],
+      [0.003424029469487098],
+      [0.0005780689403525612],
+      [0.013203899772032],
+      [0.1136564712236214],
+      [0.02032416184989065],
+      [0.00343126915490016],
+      [0.07837496680678724],
+      [0.02180637209275308],
+      [0.003899436882041278],
+      [0.0006583305916204501],
+      [0.0150371876809666],
+      [0.008236118553815397],
+      [0.00147279081164929],
+      [0.0002486469907569531],
+      [0.005679443601605414],
+      [0.004793814831834329],
+      [0.0008572346780757539],
+      [0.0001447244383860252],
+      [0.003305707754938766],
+      [0.028454856883928],
+      [0.005088325464430173],
+      [0.0008590471944252019],
+      [0.01962183446098618],
+      [0.004593213765255162],
+      [0.0008213629982626967],
+      [0.0001386683269760651],
+      [0.003167377734964674],
+      [0.001734825625865133],
+      [0.0003102232228559012],
+      [5.23740847755992e-05],
+      [0.001196297046520353],
+      [0.001009751469891839],
+      [0.0001805647499108836],
+      [3.048422175573305e-05],
+      [0.0006963020854322451],
+      [0.005993626072768841],
+      [0.001071786102975203],
+      [0.0001809465316676391],
+      [0.004133070818126224],
+      [0.01494961484403203],
+      [0.05764939168606197],
+      [0.03157553357418927],
+      [0.005646367936198111],
+      [0.0009532598824880001],
+      [0.02177378348228494],
+      [0.01837847041442964],
+      [0.00328645613606438],
+      [0.0005548428344498124],
+      [0.01267338316228739],
+      [0.1090898926498572],
+      [0.01950756178273904],
+      [0.003293404939735892],
+      [0.0752259561056265] 
+      ],
+     "Log Likelihood":-2404.197187975993,
+     "Rate Distributions":{
+       "non-synonymous/synonymous rate ratio for *test*":        [
+[0.06947598382686948, 1] 
+        ]
+      },
+     "display order":1,
+     "estimated parameters":48
+    },
+   "Nucleotide GTR":{
+     "AIC-c":5208.3461414332,
+     "Equilibrium frequencies":      [
+[0.4187763713080169],
+      [0.1213080168776371],
+      [0.04078762306610407],
+      [0.4191279887482419] 
+      ],
+     "Log Likelihood":-2562.634609178138,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0.3822973471754815,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0.7024967250049035,
+       "Substitution rate from nucleotide C to nucleotide G":0.3770721310999774,
+       "Substitution rate from nucleotide C to nucleotide T":0.7251629341424406,
+       "Substitution rate from nucleotide G to nucleotide T":0.2919275452108551
+      },
+     "display order":0,
+     "estimated parameters":41
+    }
+  },
+ "input":{
+   "file name":"/home/swisotsky/mtDNA_BUSTED/mtDNA/INVERT/Hymenoptera/hymenoptera-atp8-align-dna.fas",
+   "number of sequences":18,
+   "number of sites":60,
+   "partition count":1,
+   "trees":{
+     "0":"(SOLENOPSIS_RICHTERI,SOLENOPSIS_INVICTA,(SOLENOPSIS_GEMINATA,(PRISTOMYRMEX_PUNCTATUS,((((VANHORNIA_EUCEMIDARUM,(EVANIA_APPENDIGASTER,RADOSZKOWSKIUS_OCULATA)Node12)Node10,(ABISPA_EPHIPPIUM,CEPHUS_CINCTUS)Node15)Node9,(DIADEGMA_SEMICLAUSUM,(COTESIA_VESTALIS,(ORUSSUS_OCCIDENTALIS,SPATHIUS_AGRILI)Node22)Node20)Node18)Node8,(MELIPONA_BICOLOR,(APIS_MELLIFERA_LIGUISTICA,(APIS_CERANA,(BOMBUS_IGNITUS,BOMBUS_HYPOCRITA_SAPPOROENSIS)Node31)Node29)Node27)Node25)Node7)Node5)Node3)"
+    }
+  },
+ "tested":{
+   "0":{
+     "ABISPA_EPHIPPIUM":"test",
+     "APIS_CERANA":"test",
+     "APIS_MELLIFERA_LIGUISTICA":"test",
+     "BOMBUS_HYPOCRITA_SAPPOROENSIS":"test",
+     "BOMBUS_IGNITUS":"test",
+     "CEPHUS_CINCTUS":"test",
+     "COTESIA_VESTALIS":"test",
+     "DIADEGMA_SEMICLAUSUM":"test",
+     "EVANIA_APPENDIGASTER":"test",
+     "MELIPONA_BICOLOR":"test",
+     "Node10":"test",
+     "Node12":"test",
+     "Node15":"test",
+     "Node18":"test",
+     "Node20":"test",
+     "Node22":"test",
+     "Node25":"test",
+     "Node27":"test",
+     "Node29":"test",
+     "Node3":"test",
+     "Node31":"test",
+     "Node5":"test",
+     "Node7":"test",
+     "Node8":"test",
+     "Node9":"test",
+     "ORUSSUS_OCCIDENTALIS":"test",
+     "PRISTOMYRMEX_PUNCTATUS":"test",
+     "RADOSZKOWSKIUS_OCULATA":"test",
+     "SOLENOPSIS_GEMINATA":"test",
+     "SOLENOPSIS_INVICTA":"test",
+     "SOLENOPSIS_RICHTERI":"test",
+     "SPATHIUS_AGRILI":"test",
+     "VANHORNIA_EUCEMIDARUM":"test"
+    }
+  },
+ "timers":{
+   "FEL analysis":{
+     "order":2,
+     "timer":196
+    },
+   "Model fitting":{
+     "order":1,
+     "timer":122
+    },
+   "Total time":{
+     "order":0,
+     "timer":344
+    }
+  }
+}

@@ -1,0 +1,330 @@
+{
+ "MLE":{
+   "content":{
+     "0":      [
+[1.428343016469956, 1.222221435362212, 1.605646535039682, 1.186606368719367e-12, 0.9999991308526729, 8404.636690155376],
+      [0.9999999994884092, 0.9999999978967935, 1.222222219906379, 2.842170943040401e-13, 0.9999995746316633, 6730.295696239711],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [1, 1, 1.222222222222223, -3.112177182629239e-12, 1, 6730.295709014843],
+      [0.9999998976818513, 0.9999995822009586, 0.9999996606448563, 1.293187779083382e-12, 0.9999990926583282, 6730.29317065262],
+      [0, 0, 0, 0, 1, 0],
+      [0.9980019965355797, 0.9999999936903805, 1.131146825141162, 2.842170943040401e-14, 0.9999998654867212, 6728.563232438762],
+      [0, 0, 0, 0, 1, 0],
+      [0.9999999979820586, 0.9999999914734872, 0.9999999889652714, -2.557953848736361e-13, 1, 6730.295657272382],
+      [0.9999999914450655, 0.9999999382609436, 1.222222161663588, -1.186606368719367e-12, 1, 6730.295339607913],
+      [0.9999997953637131, 0.9999991473490806, 1.22222128430626, -1.691091711109038e-12, 1, 6730.290532306036],
+      [0, 0, 0, 0, 1, 0],
+      [0.9999999877431379, 0.9999999472422033, 1.499999915822894, 1.641353719605831e-12, 0.9999989777875802, 6730.295389057042],
+      [1.002002000334336, 0.9999999936051154, 1.00050049528742, -3.552713678800501e-13, 1, 6732.0315767292],
+      [0.9999999994884092, 0.9999999978967935, 1.222222219473255, -7.958078640513122e-13, 1, 6730.295696239711],
+      [1.222222097657947, 1.222221701157672, 1.222221794335237, -1.023181539494544e-12, 1, 8225.913814565896],
+      [1.22222209557018, 1.222221697447061, 1.222221810530781, 7.815970093361102e-13, 0.9999992946064148, 8225.913790999539],
+      [1.002002000526758, 0.9999999936264317, 1.000500498337286, 1.080024958355352e-12, 0.9999991708044603, 6732.031577021031],
+      [0.9999999988242719, 0.9999999952335344, 1.428343232435878, -1.989519660128281e-13, 1, 6730.295680048597],
+      [0.9999999979820586, 0.9999999914734872, 0.9999999889652714, -2.273736754432321e-13, 1, 6730.295657272382],
+      [1.002002001367741, 0.999999997391511, 1.222901949188059, -1.264766069652978e-12, 1, 6732.031599825686],
+      [0.9999999983799626, 0.9999999936477479, 1.222222210843986, -6.963318810448982e-13, 1, 6730.295670365545],
+      [1.222222100184321, 1.222221699192715, 1.222221798703758, -6.394884621840902e-14, 1, 8225.913805235525],
+      [1.428343016469956, 1.222221435362212, 1.605646535039682, 1.179500941361766e-12, 0.9999991334588176, 8404.636690155376],
+      [0.9999998593125482, 0.9999993860912647, 1.131748758170115, -1.676880856393836e-12, 1, 6730.291987550772],
+      [0.9999999033661926, 0.9999995807798737, 1.222221758299331, -1.463718035665806e-12, 1, 6730.293167249308],
+      [0.9999999988242719, 0.9999999952335344, 1.428343232435878, -2.273736754432321e-13, 1, 6730.295680048597],
+      [0.9999999988242719, 0.9999999952335344, 1.428343231283913, -1.13686837721616e-13, 1, 6730.295680048597],
+      [0.9999999995168309, 0.9999999979252152, 0.9999999983231191, 1.4210854715202e-14, 0.9999999048847483, 6730.295696431001],
+      [0.9999999985931254, 0.9999999937116968, 1.222222214585423, -1.449507180950604e-12, 1, 6730.295670925319],
+      [0.9999997953637131, 0.9999991473490806, 1.22222128430626, -1.755040557327447e-12, 1, 6730.290532306036],
+      [0.9999999985931254, 0.9999999936903805, 1.499999987725375, -1.392663762089796e-12, 1, 6730.295670800341],
+      [0.9999999994741984, 0.9999999978825826, 1.22118526479418, -6.821210263296962e-13, 1, 6730.295696144071],
+      [0.9999999985078603, 0.9999999936477479, 1.222222217140526, -2.344791028008331e-13, 1, 6730.295670476444],
+      [1, 1, 1.222222221886688, -3.446132268436486e-12, 1, 6730.295709014843],
+      [0.9999998496764684, 1.219508715002015, 1.167155436154089, 1.20792265079217e-13, 0.9999997226937717, 8017.321345068579],
+      [0.9980018988239513, 0.999999577937704, 1.005513691916048, 2.813749233609997e-12, 0.9999986616097742, 6728.560710069043],
+      [0.9999999985078603, 0.9980019916050138, 1.217481808240226, -1.151079231931362e-12, 1, 6718.580964250365],
+      [0.9999998507860366, 1.222221453783678, 1.072006868157435, 1.271871497010579e-12, 0.9999991001674918, 8033.22670409116],
+      [1, 1, 1.222222222222223, -3.133493464702042e-12, 1, 6730.295709014843],
+      [1.002001977414614, 0.9999998941291379, 0.5386687878888851, -1.818989403545856e-12, 1, 6732.030973607265],
+      [0, 0, 0, 0, 1, 0],
+      [0.9999999523936378, 0.9999997882582872, 0.5384614677541317, 2.486899575160351e-13, 0.9999996021043552, 6730.294426249866],
+      [0.9999999994741984, 0.9999999978825826, 1.222222218816881, -2.486899575160351e-12, 1, 6730.295696144071],
+      [0.9999999985078603, 0.9999999936477479, 1.222222216061554, -2.373212737438735e-12, 1, 6730.295670476444],
+      [1.002002000483998, 0.9999999935837991, 1.000500491612177, 4.831690603168681e-13, 0.9999994453875433, 6732.03157673399],
+      [1, 1, 1.222222221886688, -3.524291969370097e-12, 1, 6730.295709014843],
+      [0.9999999994884092, 0.9999999978967935, 1.22222220945877, -2.629008122312371e-13, 1, 6730.295696239711],
+      [0.9999999994884092, 0.9999999978754772, 1.222222218915348, -2.827960088325199e-12, 1, 6730.295696114732],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0] 
+      ]
+    },
+   "headers":    [
+["alpha", "Synonymous substitution rate at a site"],
+    ["beta", "Non-synonymous substitution rate at a site"],
+    ["alpha=beta", "The rate estimate under the neutral model"],
+    ["LRT", "Likelihood ration test statistic for beta = alpha, versus beta &neq; alpha"],
+    ["p-value", "Asymptotic p-value for evidence of selection, i.e. beta &neq; alpha"],
+    ["Total branch length", "The total length of branches contributing to inference at this site, and used to scale dN-dS"] 
+    ]
+  },
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond and Simon DW Frost",
+   "citation":"Not So Different After All: A Comparison of Methods for Detecting Amino Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222",
+   "contact":"spond@temple.edu",
+   "info":"FEL (Fixed Effects Likelihood)\n    estimates site-wise synonymous (&alpha;) and non-synonymous (&beta;) rates, and\n    uses a likelihood ratio test to determine if beta &neq; alpha at a site.\n    The estimates aggregate information over all branches,\n    so the signal is derived from\n    pervasive diversification or conservation. A subset of branches can be selected\n    for testing as well, in which case an additional (nuisance) parameter will be\n    inferred -- the non-synonymous rate on branches NOT selected for testing.\n    Multiple partitions within a NEXUS file are also supported\n    for recombination - aware analysis.\n    ",
+   "requirements":"in-frame codon alignment and a phylogenetic tree",
+   "version":"2.1"
+  },
+ "branch attributes":{
+   "0":{
+     "ENTORIA_OKINAWAENSIS":{
+       "Global MG94xREV":39.3968414022073,
+       "Nucleotide GTR":0.1363258985696439
+      },
+     "Entoria_okinawaensis":{
+       "original name":"Entoria_okinawaensis"
+      },
+     "HETEROPTERYX_DILATATA":{
+       "Global MG94xREV":59.6661665763448,
+       "Nucleotide GTR":0.1371853433264189
+      },
+     "Heteropteryx_dilatata":{
+       "original name":"Heteropteryx_dilatata"
+      },
+     "MEGACRANIA_ALPHEUS":{
+       "Global MG94xREV":88.12841050418763,
+       "Nucleotide GTR":0.1480947340992984
+      },
+     "MICADINA_PHLUCTAINOIDES":{
+       "Global MG94xREV":78.00531550777293,
+       "Nucleotide GTR":0.2329487518823501
+      },
+     "Megacrania_alpheus":{
+       "original name":"Megacrania_alpheus"
+      },
+     "Micadina_phluctainoides":{
+       "original name":"Micadina_phluctainoides"
+      },
+     "Node11":{
+       "Global MG94xREV":17.01538108219636,
+       "Nucleotide GTR":0.02624393959702237
+      },
+     "Node13":{
+       "Global MG94xREV":21.81941869435691,
+       "Nucleotide GTR":0.04956477445519748
+      },
+     "Node2":{
+       "Global MG94xREV":18.72381299753282,
+       "Nucleotide GTR":0.03382239939614571
+      },
+     "Node5":{
+       "Global MG94xREV":9.280833069310548,
+       "Nucleotide GTR":0.05206869597609981
+      },
+     "Node6":{
+       "Global MG94xREV":21.48409981874729,
+       "Nucleotide GTR":0.0262446905889709
+      },
+     "Node8":{
+       "Global MG94xREV":60.32436291000019,
+       "Nucleotide GTR":0.1222603242983837
+      },
+     "PHOBAETICUS_SERRATIPES":{
+       "Global MG94xREV":95.04105847387518,
+       "Nucleotide GTR":0.2201490616193568
+      },
+     "PHRAORTES_ILLEPIDUS":{
+       "Global MG94xREV":85.76735886729371,
+       "Nucleotide GTR":0.2320387323431613
+      },
+     "PHRAORTES_SP_IRIOMOTE_ISLAND":{
+       "Global MG94xREV":126.8745884978694,
+       "Nucleotide GTR":0.202856811602916
+      },
+     "Phobaeticus_serratipes":{
+       "original name":"Phobaeticus_serratipes"
+      },
+     "Phraortes_illepidus":{
+       "original name":"Phraortes_illepidus"
+      },
+     "Phraortes_sp_Iriomote_Island":{
+       "original name":"Phraortes_sp_Iriomote_Island"
+      },
+     "RAMULUS_HAINANENSE":{
+       "Global MG94xREV":102.6708821730059,
+       "Nucleotide GTR":0.2133231661237598
+      },
+     "RAMULUS_IRREGULARITERDENTATUS":{
+       "Global MG94xREV":44.28173409699948,
+       "Nucleotide GTR":0.1103351884203097
+      },
+     "Ramulus_hainanense":{
+       "original name":"Ramulus_hainanense"
+      },
+     "Ramulus_irregulariterdentatus":{
+       "original name":"Ramulus_irregulariterdentatus"
+      }
+    },
+   "attributes":{
+     "Global MG94xREV":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      }
+    }
+  },
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53] 
+      ],
+     "name":"fel.filter.default"
+    }
+  },
+ "fits":{
+   "Global MG94xREV":{
+     "AIC-c":2016.946980234759,
+     "Equilibrium frequencies":      [
+[0.1639845624961452],
+      [0.02527936422928894],
+      [0.003039078325362913],
+      [0.07427992736556528],
+      [0.04195400087332594],
+      [0.006467501896574223],
+      [0.0007775213274687294],
+      [0.01900386286446183],
+      [0.03028027236020957],
+      [0.004667915212895743],
+      [0.0005611755034450993],
+      [0.01371602544342413],
+      [0.1567934276822832],
+      [0.02417080063394557],
+      [0.002905807109981988],
+      [0.07102256604131128],
+      [0.02247058653414739],
+      [0.003463997664144882],
+      [0.0004164408615946662],
+      [0.01017847967034917],
+      [0.005748900949745968],
+      [0.000886233184481312],
+      [0.000106542713564528],
+      [0.002604074057208879],
+      [0.004149265455177437],
+      [0.0006396382142855826],
+      [7.689713299264532e-05],
+      [0.001879488727106701],
+      [0.02148519489328849],
+      [0.003312092668829519],
+      [0.0003981788841734777],
+      [0.009732127779686569],
+      [0.01095407820187615],
+      [0.001688647568077337],
+      [0.0002030087535735854],
+      [0.00496185812131681],
+      [0.002802504086070881],
+      [0.0004320255545245103],
+      [5.19379952300036e-05],
+      [0.001269447543026731],
+      [0.00202270546909342],
+      [0.0003118141580125221],
+      [3.748621367855488e-05],
+      [0.0009162229239092108],
+      [0.01047371436815778],
+      [0.001614596132196415],
+      [0.0001941063099952391],
+      [0.004744268183980583],
+      [0.01236804987097124],
+      [0.03634180977562004],
+      [0.02052619561084039],
+      [0.003164256239670512],
+      [0.0003804060286743808],
+      [0.009297730809876998],
+      [0.01481476809546322],
+      [0.002283799846503647],
+      [0.0002745577993980906],
+      [0.006710631057692215],
+      [0.07671193450222095],
+      [0.01182567982922531],
+      [0.001421680028251681],
+      [0.03474813016640467] 
+      ],
+     "Log Likelihood":-976.4295340734236,
+     "Rate Distributions":{
+       "non-synonymous/synonymous rate ratio for *test*":        [
+[0.0002379055946936862, 1] 
+        ]
+      },
+     "display order":1,
+     "estimated parameters":30
+    },
+   "Nucleotide GTR":{
+     "AIC-c":2125.875751451326,
+     "Equilibrium frequencies":      [
+[0.5313390313390314],
+      [0.1018518518518518],
+      [0.04558404558404559],
+      [0.3212250712250712] 
+      ],
+     "Log Likelihood":-1039.55293848717,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":1.104954225264912,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0.777603497170591,
+       "Substitution rate from nucleotide C to nucleotide G":0.6395134555365605,
+       "Substitution rate from nucleotide C to nucleotide T":2.056310150140076,
+       "Substitution rate from nucleotide G to nucleotide T":0.2104304964656675
+      },
+     "display order":0,
+     "estimated parameters":23
+    }
+  },
+ "input":{
+   "file name":"/home/swisotsky/mtDNA_BUSTED/mtDNA/INVERT/Phasmatodea/Phasmatodea-ATP8-Aligned-DNA.fas",
+   "number of sequences":9,
+   "number of sites":54,
+   "partition count":1,
+   "trees":{
+     "0":"(HETEROPTERYX_DILATATA,(MEGACRANIA_ALPHEUS,PHOBAETICUS_SERRATIPES)Node2,((RAMULUS_HAINANENSE,(ENTORIA_OKINAWAENSIS,RAMULUS_IRREGULARITERDENTATUS)Node8)Node6,(MICADINA_PHLUCTAINOIDES,(PHRAORTES_SP_IRIOMOTE_ISLAND,PHRAORTES_ILLEPIDUS)Node13)Node11)Node5)"
+    }
+  },
+ "tested":{
+   "0":{
+     "ENTORIA_OKINAWAENSIS":"test",
+     "HETEROPTERYX_DILATATA":"test",
+     "MEGACRANIA_ALPHEUS":"test",
+     "MICADINA_PHLUCTAINOIDES":"test",
+     "Node11":"test",
+     "Node13":"test",
+     "Node2":"test",
+     "Node5":"test",
+     "Node6":"test",
+     "Node8":"test",
+     "PHOBAETICUS_SERRATIPES":"test",
+     "PHRAORTES_ILLEPIDUS":"test",
+     "PHRAORTES_SP_IRIOMOTE_ISLAND":"test",
+     "RAMULUS_HAINANENSE":"test",
+     "RAMULUS_IRREGULARITERDENTATUS":"test"
+    }
+  },
+ "timers":{
+   "FEL analysis":{
+     "order":2,
+     "timer":44
+    },
+   "Model fitting":{
+     "order":1,
+     "timer":47
+    },
+   "Total time":{
+     "order":0,
+     "timer":91
+    }
+  }
+}

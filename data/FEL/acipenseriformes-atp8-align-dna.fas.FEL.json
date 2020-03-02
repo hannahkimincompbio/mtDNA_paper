@@ -1,0 +1,330 @@
+{
+ "MLE":{
+   "content":{
+     "0":      [
+[0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [2.121015204185125, 0, 1.364034020895631, 2.50164503928719, 0.1137274483426604, 0.4885132174620608],
+      [2.782169509499239, 0, 0.6322413600199047, 2.908701836687037, 0.08810276460466493, 0.6407905874170668],
+      [0, 0, 0, 0, 1, 0],
+      [2.783710201776786, 0.4676931602071009, 0.8278834816256997, 1.2748595472044, 0.2588570079796257, 0.8793889406710863],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0.6453186616704223, 0.4603359545288206, 0.6520305098847032, 0.4193876535115549, 0.3287261603051722],
+      [0, 0, 0, 0, 1, 0],
+      [3.420335799801142, 0, 0.6511515283702812, 3.678055993473379, 0.05513309676661748, 0.7877733469635657],
+      [0, 0, 0, 0, 1, 0],
+      [0, 1.289574916596207, 0.8984287587888103, 1.32561884535944, 0.2495861278519884, 0.6569111292415051],
+      [9.107472271921473, 0, 1.105606118244759, 7.023716801441722, 0.00804370923611486, 2.097637288843563],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [5.801229212177226, 0.674113198883337, 1.748113555431186, 2.76458848931788, 0.09637146647099315, 1.679535970103921],
+      [0, 0, 0, 0, 1, 0],
+      [3.03969116958311, 0, 1.646012903381908, 2.999210204967149, 0.08330511771254823, 0.7001030970518459],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0.6709753618698429, 0.4664959813154344, 0.7004838636807023, 0.4026211568455564, 0.3417957165470834],
+      [1.520074061395732, 0, 0.6549679345780297, 1.415603405538812, 0.2341284187192701, 0.3501041713646471],
+      [2.530018164518509, 0, 0.7464787155629142, 2.937221781143679, 0.08655949583380396, 0.5827149712777443],
+      [4.507162598768373, 0, 0.7324203008047303, 3.528959577919238, 0.06030561913232158, 1.038091805473368],
+      [0, 0, 0, 0, 1, 0],
+      [0.6301081656843196, 0, 0.2248469462666938, 2.049540009573363, 0.1522521841964392, 0.1451268085019807],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0.2846887443660341, 0.2534110008430792, 0.2287930399341107, 0.6324202188707407, 0.145020814329623],
+      [15.05379077940164, 0, 1.555700624276848, 7.353562134640899, 0.006693001503281004, 3.467196158771304],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0.7355624931859248, 0, 0.388012951555353, 1.316164371879239, 0.2512815879244329, 0.1694150987138837],
+      [2.628749264033712, 0, 0.6015613279775199, 2.838454985960542, 0.09203266684286038, 0.6054547644638422],
+      [0, 0, 0, 0, 1, 0],
+      [2.315672172226188, 0, 0.6149321842669111, 2.49703956858994, 0.1140605264992873, 0.5333467017159763],
+      [0, 0, 0, 0, 1, 0],
+      [8.266636798305949, 0, 1.459001736585083, 5.981800978436585, 0.01445423496335962, 1.903975667860528],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [3.25813307052722, 0, 0.4720537688138315, 5.111322093561416, 0.02377019980259532, 0.7504147382169707],
+      [1.23684837969127, 0, 0.8469469139867279, 1.49619883558152, 0.2212571607975489, 0.2848714994043871],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [2.778104823341989, 0, 0.7011157939930025, 2.957779016151154, 0.08546526204760729, 0.6398544069933085],
+      [32.68021985985934, 0, 0.3574904661202413, 5.949754826568856, 0.01471933317317042, 7.52692357867417],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0.875378684960224, 0.6669399156020841, 0.5860330003846279, 0.4439572459131079, 0.4459190335129816],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0] 
+      ]
+    },
+   "headers":    [
+["alpha", "Synonymous substitution rate at a site"],
+    ["beta", "Non-synonymous substitution rate at a site"],
+    ["alpha=beta", "The rate estimate under the neutral model"],
+    ["LRT", "Likelihood ration test statistic for beta = alpha, versus beta &neq; alpha"],
+    ["p-value", "Asymptotic p-value for evidence of selection, i.e. beta &neq; alpha"],
+    ["Total branch length", "The total length of branches contributing to inference at this site, and used to scale dN-dS"] 
+    ]
+  },
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond and Simon DW Frost",
+   "citation":"Not So Different After All: A Comparison of Methods for Detecting Amino Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222",
+   "contact":"spond@temple.edu",
+   "info":"FEL (Fixed Effects Likelihood)\n    estimates site-wise synonymous (&alpha;) and non-synonymous (&beta;) rates, and\n    uses a likelihood ratio test to determine if beta &neq; alpha at a site.\n    The estimates aggregate information over all branches,\n    so the signal is derived from\n    pervasive diversification or conservation. A subset of branches can be selected\n    for testing as well, in which case an additional (nuisance) parameter will be\n    inferred -- the non-synonymous rate on branches NOT selected for testing.\n    Multiple partitions within a NEXUS file are also supported\n    for recombination - aware analysis.\n    ",
+   "requirements":"in-frame codon alignment and a phylogenetic tree",
+   "version":"2.1"
+  },
+ "branch attributes":{
+   "0":{
+     "ACIPENSER_DABRYANUS":{
+       "Global MG94xREV":0.03229818766608629,
+       "Nucleotide GTR":0.02533840562486636
+      },
+     "ACIPENSER_GUELDENSTAEDTII":{
+       "Global MG94xREV":0.006458329873718176,
+       "Nucleotide GTR":0.006069959867347015
+      },
+     "ACIPENSER_SINENSIS":{
+       "Global MG94xREV":0.006460523031503713,
+       "Nucleotide GTR":0.006074126969085813
+      },
+     "ACIPENSER_STELLATUS":{
+       "Global MG94xREV":0.01197772911358815,
+       "Nucleotide GTR":0.01208294323240884
+      },
+     "ACIPENSER_TRANSMONTANUS":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0.006109546539890769
+      },
+     "Acipenser_dabryanus":{
+       "original name":"Acipenser_dabryanus"
+      },
+     "Acipenser_gueldenstaedtii":{
+       "original name":"Acipenser_gueldenstaedtii"
+      },
+     "Acipenser_sinensis":{
+       "original name":"Acipenser_sinensis"
+      },
+     "Acipenser_stellatus":{
+       "original name":"Acipenser_stellatus"
+      },
+     "Acipenser_transmontanus":{
+       "original name":"Acipenser_transmontanus"
+      },
+     "HUSO_HUSO":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0
+      },
+     "Huso_huso":{
+       "original name":"Huso_huso"
+      },
+     "Node10":{
+       "Global MG94xREV":0.009860606999431941,
+       "Nucleotide GTR":0.01295224384859378
+      },
+     "Node13":{
+       "Global MG94xREV":0.06228088837600208,
+       "Nucleotide GTR":0.04185529968564978
+      },
+     "Node3":{
+       "Global MG94xREV":0.01305427156959331,
+       "Nucleotide GTR":0.01241728868910162
+      },
+     "Node5":{
+       "Global MG94xREV":0.006586280513932333,
+       "Nucleotide GTR":0.006078906922826756
+      },
+     "Node7":{
+       "Global MG94xREV":0.005514121226516225,
+       "Nucleotide GTR":0
+      },
+     "Node9":{
+       "Global MG94xREV":0.01559406532306865,
+       "Nucleotide GTR":0.01296771577402956
+      },
+     "POLYODON_SPATHULA":{
+       "Global MG94xREV":0.08247240109236252,
+       "Nucleotide GTR":0.05572770360814357
+      },
+     "PSEPHURUS_GLADIUS":{
+       "Global MG94xREV":0.01766808155163671,
+       "Nucleotide GTR":0.01853816719887079
+      },
+     "Polyodon_spathula":{
+       "original name":"Polyodon_spathula"
+      },
+     "Psephurus_gladius":{
+       "original name":"Psephurus_gladius"
+      },
+     "SCAPHIRHYCHUS":{
+       "Global MG94xREV":0.0127759221380068,
+       "Nucleotide GTR":0.01831527847861505
+      },
+     "Scaphirhychus":{
+       "original name":"Scaphirhychus"
+      }
+    },
+   "attributes":{
+     "Global MG94xREV":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      }
+    }
+  },
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55] 
+      ],
+     "name":"fel.filter.default"
+    }
+  },
+ "fits":{
+   "Global MG94xREV":{
+     "AIC-c":800.167873807328,
+     "Equilibrium frequencies":      [
+[0.04067498992339412],
+      [0.02724888341535417],
+      [0.008169798117612485],
+      [0.01924819255329149],
+      [0.04366049529078845],
+      [0.02924892540295533],
+      [0.008769453487573175],
+      [0.0206609914817908],
+      [0.01536145980545782],
+      [0.01085109917085594],
+      [0.05179889554870725],
+      [0.03470098132806256],
+      [0.01040409647661251],
+      [0.02451224001400203],
+      [0.03392481926522039],
+      [0.02272682665160975],
+      [0.006813988770380348],
+      [0.01605388113881273],
+      [0.03641486856074451],
+      [0.02439495399669355],
+      [0.007314129030664344],
+      [0.01723222066385512],
+      [0.01912499457707892],
+      [0.01281216660487419],
+      [0.003841361607942356],
+      [0.009050317624997035],
+      [0.043202670066729],
+      [0.02894222032008992],
+      [0.008677496743127486],
+      [0.02044433972391583],
+      [0.01388990537341914],
+      [0.00930508926697767],
+      [0.002789864803588035],
+      [0.006572972081323143],
+      [0.01490941114645171],
+      [0.009988073921748721],
+      [0.002994638212533027],
+      [0.007055421947087875],
+      [0.007830384087414077],
+      [0.005245710533604136],
+      [0.001572776226817073],
+      [0.003705489318242933],
+      [0.01768855404695152],
+      [0.01184987010247189],
+      [0.003552844532432339],
+      [0.008370566161817396],
+      [0.01819918250333115],
+      [0.01285562288175169],
+      [0.02916028924455514],
+      [0.01953498509721536],
+      [0.005857006396999319],
+      [0.01379921330886555],
+      [0.01531490832481993],
+      [0.0102597235363994],
+      [0.003076084577750795],
+      [0.007247311060858956],
+      [0.03459582321933678],
+      [0.02317634387463537],
+      [0.00694876364928198],
+      [0.01637141319812429] 
+      ],
+     "Log Likelihood":-368.1177635421418,
+     "Rate Distributions":{
+       "non-synonymous/synonymous rate ratio for *test*":        [
+[0.103417364347093, 1] 
+        ]
+      },
+     "display order":1,
+     "estimated parameters":30
+    },
+   "Nucleotide GTR":{
+     "AIC-c":834.2394873103324,
+     "Equilibrium frequencies":      [
+[0.3286195286195286],
+      [0.3016835016835017],
+      [0.1111111111111111],
+      [0.2585858585858586] 
+      ],
+     "Log Likelihood":-393.7487759132307,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0,
+       "Substitution rate from nucleotide C to nucleotide G":0,
+       "Substitution rate from nucleotide C to nucleotide T":0.5024919002859977,
+       "Substitution rate from nucleotide G to nucleotide T":0.149160643340104
+      },
+     "display order":0,
+     "estimated parameters":23
+    }
+  },
+ "input":{
+   "file name":"/home/swisotsky/mtDNA_BUSTED/mtDNA/VERT/Acipenseriformes/acipenseriformes-atp8-align-dna.fas",
+   "number of sequences":9,
+   "number of sites":56,
+   "partition count":1,
+   "trees":{
+     "0":"(ACIPENSER_GUELDENSTAEDTII,ACIPENSER_SINENSIS,(ACIPENSER_STELLATUS,(HUSO_HUSO,(SCAPHIRHYCHUS,((ACIPENSER_DABRYANUS,ACIPENSER_TRANSMONTANUS)Node10,(POLYODON_SPATHULA,PSEPHURUS_GLADIUS)Node13)Node9)Node7)Node5)Node3)"
+    }
+  },
+ "tested":{
+   "0":{
+     "ACIPENSER_DABRYANUS":"test",
+     "ACIPENSER_GUELDENSTAEDTII":"test",
+     "ACIPENSER_SINENSIS":"test",
+     "ACIPENSER_STELLATUS":"test",
+     "ACIPENSER_TRANSMONTANUS":"test",
+     "HUSO_HUSO":"test",
+     "Node10":"test",
+     "Node13":"test",
+     "Node3":"test",
+     "Node5":"test",
+     "Node7":"test",
+     "Node9":"test",
+     "POLYODON_SPATHULA":"test",
+     "PSEPHURUS_GLADIUS":"test",
+     "SCAPHIRHYCHUS":"test"
+    }
+  },
+ "timers":{
+   "FEL analysis":{
+     "order":2,
+     "timer":19
+    },
+   "Model fitting":{
+     "order":1,
+     "timer":3
+    },
+   "Total time":{
+     "order":0,
+     "timer":24
+    }
+  }
+}

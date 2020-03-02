@@ -1,0 +1,382 @@
+{
+ "MLE":{
+   "content":{
+     "0":      [
+[0, 0, 0, 0, 1, 0],
+      [0.598045494485018, 0, 0.09856220797808633, 3.33498328527855, 0.06782109594490182, 0.5278550288737536],
+      [0, 0, 0, 0, 1, 0],
+      [0.9754863186187883, 0, 0.2648403599907553, 4.685210239580318, 0.0304233404839459, 0.8609969703456593],
+      [3.78645123207211, 0, 0.3497381825118642, 12.89599319262203, 0.0003292863120800682, 3.342048962605392],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0.1232533066596122, 0.0863650662587762, 0.6962693801982667, 0.4040400830965022, 0.3084354909545239],
+      [1.110745877400461, 0, 0.2038748703414386, 6.517018932885914, 0.01068469529723892, 0.9803815973758017],
+      [0, 0, 0, 0, 1, 0],
+      [0.418056720985349, 0, 0.09142740837505622, 3.001362449592644, 0.08319452747011724, 0.3689908954445212],
+      [0.3361539131422065, 0.3896325063286233, 0.3785206931553434, 0.004879257687914418, 0.9443117101238246, 1.271737395374713],
+      [3.108423204971788, 0, 0.2142870692135568, 9.75235770453493, 0.001790928732028019, 2.743598665558266],
+      [0.275725442653378, 0, 0.0931819772311179, 2.143836059891344, 0.1431435619259424, 0.2433645313528459],
+      [0.5296396259211203, 0, 0.09957858919183316, 3.076146856483625, 0.07944854030085058, 0.4674777130024526],
+      [0.6123785448746265, 0, 0.09660635976525064, 3.583268896023171, 0.05836419608128962, 0.5405058602854521],
+      [0.4130013800099014, 0.1642693461585407, 0.2331263018587192, 0.3718615626349511, 0.5419913015702748, 0.7756050452256814],
+      [0, 0, 0, 0, 1, 0],
+      [0.9338406698509574, 0, 0.3637751825884634, 5.114733096019965, 0.02372351524215355, 0.8242391227646169],
+      [0.4390734627304971, 0, 0.09081408836369009, 3.023943537399026, 0.0820437385155065, 0.3875409772075654],
+      [1.441462218404904, 0, 0.1974259787532452, 7.183266766119569, 0.00735866026421983, 1.272282941570772],
+      [1.244396446814547, 0, 0.3593607445947232, 5.655021590188053, 0.01740546031091084, 1.098346076378884],
+      [0.528872533256181, 0, 0.1059082895868586, 3.124559685031027, 0.07712070352222644, 0.4668006512662897],
+      [1.432404683203895, 0.1447729541044793, 0.3426478728421377, 2.559256591348269, 0.1096501339867199, 1.62657583395413],
+      [20.73900607423075, 0, 0.4753186527622793, 21.60689036144977, 3.346474563792334e-06, 18.30494293674554],
+      [5.74153557221863, 0, 0.6790056259705949, 20.76972774238588, 5.179525168763632e-06, 5.067672030307508],
+      [19.52895578111203, 0.4355256634901019, 0.941626146091035, 9.197848294473033, 0.002422997720472497, 18.32679402164996],
+      [0, 0, 0, 0, 1, 0],
+      [4.782075453217744, 0.1348414702344275, 0.7713120830889693, 12.54999994643455, 0.000396206313177716, 4.558254636464137],
+      [0.3871958561441834, 0, 0.1215443983043963, 2.149648862719514, 0.1426025001214004, 0.3417520601852906],
+      [3.661468540830572, 0.2726948152448679, 0.4928329766973012, 3.374128572340702, 0.06622759480587304, 3.914140745567941],
+      [0.9325368534150561, 0, 0.09571617191335627, 4.088614477911573, 0.04317301878053537, 0.8230883306112348],
+      [2.041923823448835, 0.299524962583494, 0.6362464975585087, 3.116926295866456, 0.07748281163223647, 2.551817369887036],
+      [9.284833637574371, 0, 0.6428597989746583, 22.90691723628601, 1.700388410075249e-06, 8.195105845701843],
+      [0, 0, 0, 0, 1, 0],
+      [0.4560398948657898, 0, 0.09402292322435307, 3.014720150819002, 0.08251169583071394, 0.4025161197464645],
+      [0, 0.1151901076094911, 0.1081564344721593, 0.1301580862893896, 0.7182681859619434, 0.2882577218942876],
+      [2.959424239887616, 0.6662064499857938, 1.090429887267365, 2.590076046616808, 0.1075351726122548, 4.27923687939939],
+      [1.066528112161773, 0.3777457797876461, 0.5246114189886154, 0.6205998048282737, 0.4308244821144378, 1.886644217635892],
+      [3.688773681094004, 0.5700317504342817, 1.126038246782913, 4.670540846130926, 0.03068426305351291, 4.682312604456874],
+      [4.770511047538916, 0.4236253148611647, 1.249419807169127, 5.90447682729701, 0.01510245062375115, 5.270715230231036],
+      [2.806645041849414, 0.3046310128042456, 0.5722724251941659, 3.69346553933989, 0.05462600629822634, 3.239563633614269],
+      [1.56979474635499, 0.2773241161928982, 0.6113225199409824, 3.403073275593684, 0.06507506907319804, 2.0795438440694],
+      [0, 0.1181304571482565, 0.1088587532730758, 0.1643634957460449, 0.6851705168573805, 0.2956158056499761],
+      [5.985955926935292, 1.014486753281318, 1.61211463665733, 3.398898590620881, 0.06523996760556916, 7.822110104149958],
+      [0.275725442653378, 0, 0.0931819772311179, 2.143836059891344, 0.1431435619259424, 0.2433645313528459],
+      [0, 0, 0, 0, 1, 0],
+      [0.6228716399325895, 0.2219018862692257, 0.3197074146154756, 0.4304552267303841, 0.5117656599851172, 1.105066250276707],
+      [6.544541834462643, 0.2334341930929917, 0.4439801453291538, 5.848554962418987, 0.01558984748963521, 6.360590190019808],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0],
+      [0, 0, 0, 0, 1, 0] 
+      ]
+    },
+   "headers":    [
+["alpha", "Synonymous substitution rate at a site"],
+    ["beta", "Non-synonymous substitution rate at a site"],
+    ["alpha=beta", "The rate estimate under the neutral model"],
+    ["LRT", "Likelihood ration test statistic for beta = alpha, versus beta &neq; alpha"],
+    ["p-value", "Asymptotic p-value for evidence of selection, i.e. beta &neq; alpha"],
+    ["Total branch length", "The total length of branches contributing to inference at this site, and used to scale dN-dS"] 
+    ]
+  },
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond and Simon DW Frost",
+   "citation":"Not So Different After All: A Comparison of Methods for Detecting Amino Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222",
+   "contact":"spond@temple.edu",
+   "info":"FEL (Fixed Effects Likelihood)\n    estimates site-wise synonymous (&alpha;) and non-synonymous (&beta;) rates, and\n    uses a likelihood ratio test to determine if beta &neq; alpha at a site.\n    The estimates aggregate information over all branches,\n    so the signal is derived from\n    pervasive diversification or conservation. A subset of branches can be selected\n    for testing as well, in which case an additional (nuisance) parameter will be\n    inferred -- the non-synonymous rate on branches NOT selected for testing.\n    Multiple partitions within a NEXUS file are also supported\n    for recombination - aware analysis.\n    ",
+   "requirements":"in-frame codon alignment and a phylogenetic tree",
+   "version":"2.1"
+  },
+ "branch attributes":{
+   "0":{
+     "CORYDORAS_RABAUTI":{
+       "Global MG94xREV":0.4189761082528131,
+       "Nucleotide GTR":0.2451671063158064
+      },
+     "CRANOGLANIS_BOUDERIUS":{
+       "Global MG94xREV":0.1133501836761143,
+       "Nucleotide GTR":0.08647093199659092
+      },
+     "Corydoras_rabauti":{
+       "original name":"Corydoras_rabauti"
+      },
+     "Cranoglanis_bouderius":{
+       "original name":"Cranoglanis_bouderius"
+      },
+     "ICTALURUS_PUNCTATUS":{
+       "Global MG94xREV":0.0506551918950397,
+       "Nucleotide GTR":0.03819266353351634
+      },
+     "Ictalurus_punctatus":{
+       "original name":"Ictalurus_punctatus"
+      },
+     "LEIOCASSIS_LONGIROSTRIS":{
+       "Global MG94xREV":0.01230519525277487,
+       "Nucleotide GTR":0.01222532027554856
+      },
+     "LIOBAGRUS_OBESUS":{
+       "Global MG94xREV":0.1100348594499585,
+       "Nucleotide GTR":0.0792157539641738
+      },
+     "Leiocassis_longirostris":{
+       "original name":"Leiocassis_longirostris"
+      },
+     "Liobagrus_obesus":{
+       "original name":"Liobagrus_obesus"
+      },
+     "Node10":{
+       "Global MG94xREV":0.02775324490295854,
+       "Nucleotide GTR":0.02500814439848712
+      },
+     "Node13":{
+       "Global MG94xREV":0.03084013683593274,
+       "Nucleotide GTR":0.02497698542924894
+      },
+     "Node15":{
+       "Global MG94xREV":0.002071307424953515,
+       "Nucleotide GTR":0.008122765185369153
+      },
+     "Node16":{
+       "Global MG94xREV":0.0472015040893702,
+       "Nucleotide GTR":0.03119042196968113
+      },
+     "Node19":{
+       "Global MG94xREV":0.05650621837645841,
+       "Nucleotide GTR":0.04929415635973652
+      },
+     "Node21":{
+       "Global MG94xREV":0.01885201368617933,
+       "Nucleotide GTR":0.01672543237736871
+      },
+     "Node3":{
+       "Global MG94xREV":0.0189088320898654,
+       "Nucleotide GTR":0.009182646529906927
+      },
+     "Node4":{
+       "Global MG94xREV":0.05298019094129728,
+       "Nucleotide GTR":0.04902539043027634
+      },
+     "Node5":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0
+      },
+     "Node7":{
+       "Global MG94xREV":0.01888178726563946,
+       "Nucleotide GTR":0.01836572973853257
+      },
+     "PANGASIANODON_GIGAS":{
+       "Global MG94xREV":0.04656330219155861,
+       "Nucleotide GTR":0.05200805288785343
+      },
+     "PELTEOBAGRUS_NITIDUS":{
+       "Global MG94xREV":0,
+       "Nucleotide GTR":0
+      },
+     "PELTEOBAGRUS_VACHELLII":{
+       "Global MG94xREV":0.0125149642482209,
+       "Nucleotide GTR":0.01230942622501696
+      },
+     "PSEUDOBAGRUS_BREVICORPUS":{
+       "Global MG94xREV":0.01245317671071888,
+       "Nucleotide GTR":0.01218537811242032
+      },
+     "PSEUDOBAGRUS_TOKIENSIS":{
+       "Global MG94xREV":0.02644505035590756,
+       "Nucleotide GTR":0.02495364535652433
+      },
+     "Pangasianodon_gigas":{
+       "original name":"Pangasianodon_gigas"
+      },
+     "Pelteobagrus_nitidus":{
+       "original name":"Pelteobagrus_nitidus"
+      },
+     "Pelteobagrus_vachellii":{
+       "original name":"Pelteobagrus_vachellii"
+      },
+     "Pseudobagrus_brevicorpus":{
+       "original name":"Pseudobagrus_brevicorpus"
+      },
+     "Pseudobagrus_tokiensis":{
+       "original name":"Pseudobagrus_tokiensis"
+      },
+     "SILURUS_GLANIS":{
+       "Global MG94xREV":0.02394969493868667,
+       "Nucleotide GTR":0.02243034660422032
+      },
+     "SILURUS_LANZHOUENSIS":{
+       "Global MG94xREV":0.01988863079078786,
+       "Nucleotide GTR":0.01739224775361171
+      },
+     "SILURUS_MERIDIONALIS":{
+       "Global MG94xREV":0.01169660681341602,
+       "Nucleotide GTR":0.01338310758604637
+      },
+     "Silurus_glanis":{
+       "original name":"Silurus_glanis"
+      },
+     "Silurus_lanzhouensis":{
+       "original name":"Silurus_lanzhouensis"
+      },
+     "Silurus_meridionalis":{
+       "original name":"Silurus_meridionalis"
+      }
+    },
+   "attributes":{
+     "Global MG94xREV":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      }
+    }
+  },
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55] 
+      ],
+     "name":"fel.filter.default"
+    }
+  },
+ "fits":{
+   "Global MG94xREV":{
+     "AIC-c":1505.360628963024,
+     "Equilibrium frequencies":      [
+[0.04892148441931045],
+      [0.02776650820716753],
+      [0.007000381248220142],
+      [0.01685372778003455],
+      [0.04929841169069365],
+      [0.0279804419072299],
+      [0.007054317358987301],
+      [0.01698358135459731],
+      [0.01287484001052175],
+      [0.007814776245175046],
+      [0.05845562825747452],
+      [0.03317782976196081],
+      [0.008364662044985427],
+      [0.0201382941984788],
+      [0.03190630597602666],
+      [0.01810915423478129],
+      [0.004565607701927935],
+      [0.01099190267362746],
+      [0.03215213573761734],
+      [0.01824868054257417],
+      [0.00460078451787538],
+      [0.01107659241538936],
+      [0.01479439120335837],
+      [0.008396895344531889],
+      [0.002116991746839614],
+      [0.005096751355204568],
+      [0.03812441881807765],
+      [0.02163838649973177],
+      [0.005455383657328601],
+      [0.01313407767893246],
+      [0.02394441734663483],
+      [0.01359020210982698],
+      [0.003426307524854582],
+      [0.008248987057564199],
+      [0.0241289028339919],
+      [0.01369491107071822],
+      [0.003452706330238201],
+      [0.008312543350268509],
+      [0.0111026039062235],
+      [0.006301536965656741],
+      [0.001588718353788624],
+      [0.003824909773407823],
+      [0.02861086444679143],
+      [0.01623875096812095],
+      [0.004094049094095541],
+      [0.009856604448154397],
+      [0.0209998033098212],
+      [0.01274647016388738],
+      [0.03728437660461461],
+      [0.02116160131442202],
+      [0.005335178478997608],
+      [0.01284467839030712],
+      [0.01715592574513334],
+      [0.009737238325004118],
+      [0.002454913670499399],
+      [0.005910313347091177],
+      [0.04420997723588861],
+      [0.02509238446727192],
+      [0.006326191841885166],
+      [0.01523058693617811] 
+      ],
+     "Log Likelihood":-712.5293710852854,
+     "Rate Distributions":{
+       "non-synonymous/synonymous rate ratio for *test*":        [
+[0.09997979019455899, 1] 
+        ]
+      },
+     "display order":1,
+     "estimated parameters":38
+    },
+   "Nucleotide GTR":{
+     "AIC-c":1623.671259414407,
+     "Equilibrium frequencies":      [
+[0.3505827505827506],
+      [0.2764568764568764],
+      [0.1184149184149184],
+      [0.2545454545454545] 
+      ],
+     "Log Likelihood":-780.3746631644526,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0.357011100507367,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0.2476759137269848,
+       "Substitution rate from nucleotide C to nucleotide G":0.003798460178680324,
+       "Substitution rate from nucleotide C to nucleotide T":1.068533672049519,
+       "Substitution rate from nucleotide G to nucleotide T":0.01868339273199442
+      },
+     "display order":0,
+     "estimated parameters":31
+    }
+  },
+ "input":{
+   "file name":"/home/swisotsky/mtDNA_BUSTED/mtDNA/VERT/Siluriformes/siluriformes-atp8-align-dna.fas",
+   "number of sequences":13,
+   "number of sites":56,
+   "partition count":1,
+   "trees":{
+     "0":"(CORYDORAS_RABAUTI,LIOBAGRUS_OBESUS,(((PELTEOBAGRUS_VACHELLII,(PELTEOBAGRUS_NITIDUS,LEIOCASSIS_LONGIROSTRIS)Node7)Node5,(PSEUDOBAGRUS_BREVICORPUS,PSEUDOBAGRUS_TOKIENSIS)Node10)Node4,(ICTALURUS_PUNCTATUS,((CRANOGLANIS_BOUDERIUS,PANGASIANODON_GIGAS)Node16,(SILURUS_GLANIS,(SILURUS_MERIDIONALIS,SILURUS_LANZHOUENSIS)Node21)Node19)Node15)Node13)Node3)"
+    }
+  },
+ "tested":{
+   "0":{
+     "CORYDORAS_RABAUTI":"test",
+     "CRANOGLANIS_BOUDERIUS":"test",
+     "ICTALURUS_PUNCTATUS":"test",
+     "LEIOCASSIS_LONGIROSTRIS":"test",
+     "LIOBAGRUS_OBESUS":"test",
+     "Node10":"test",
+     "Node13":"test",
+     "Node15":"test",
+     "Node16":"test",
+     "Node19":"test",
+     "Node21":"test",
+     "Node3":"test",
+     "Node4":"test",
+     "Node5":"test",
+     "Node7":"test",
+     "PANGASIANODON_GIGAS":"test",
+     "PELTEOBAGRUS_NITIDUS":"test",
+     "PELTEOBAGRUS_VACHELLII":"test",
+     "PSEUDOBAGRUS_BREVICORPUS":"test",
+     "PSEUDOBAGRUS_TOKIENSIS":"test",
+     "SILURUS_GLANIS":"test",
+     "SILURUS_LANZHOUENSIS":"test",
+     "SILURUS_MERIDIONALIS":"test"
+    }
+  },
+ "timers":{
+   "FEL analysis":{
+     "order":2,
+     "timer":48
+    },
+   "Model fitting":{
+     "order":1,
+     "timer":8
+    },
+   "Total time":{
+     "order":0,
+     "timer":58
+    }
+  }
+}
