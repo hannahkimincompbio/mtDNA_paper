@@ -1,0 +1,33 @@
+---
+title: "FEL results preliminary"
+author: "sadie"
+date: "3/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(jsonlite)
+
+library(stringr)
+
+library(dplyr)
+```
+
+```{r}
+filepath <- read_json("./data/FEL/zeiformes-nd1-align-dna.fas.FEL.json") #read in json
+
+heads <- filepath$MLE$headers  %>% unlist() %>% .[c(TRUE,FALSE)] #get headers and ignore header descriptions
+```
+
+```{r}
+#get MLE contents and make them a data frame
+temp <- filepath$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE) %>% as.data.frame() 
+#make the headers the variable names
+ names(temp)  <- heads
+```
+
+
+```{r}
+
+```
+
