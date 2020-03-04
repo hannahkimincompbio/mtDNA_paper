@@ -26,8 +26,30 @@ temp <- filepath$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE) %
  names(temp)  <- heads
 ```
 
+#kernel density and plots?
+```{r}
+d_alpha <- density(temp$alpha)
+
+d_alpha %>% plot()
+
+d_beta <- density(temp$beta) 
+d_beta %>% plot()
+```
 
 ```{r}
+#uses entropy library to calculate Kullback-Leibler divergence (KL) as it is needed to do the JSD
+# library("entropy")
+# 
+# KL.plugin(freqs1 = temp$alpha, freqs2 = temp$beta)
+```
 
+```{r}
+#actually, lets try the way this site does it: https://enterotype.embl.de/enterotypes.html
+
+JSD<- function(x,y) sqrt(0.5 * KLD(x, (x+y)/2) + 0.5 * KLD(y, (x+y)/2))
+
+KLD <- function(x,y) sum(x * log(x/y))
+
+JSD(temp$alpha, temp$beta)
 ```
 
