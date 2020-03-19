@@ -2,7 +2,9 @@
 title: "FEL results preliminary"
 author: "sadie"
 date: "3/4/2020"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +16,7 @@ library(dplyr)
 ```
 
 ```{r}
-filepath <- read_json("./data/FEL/zeiformes-nd1-align-dna.fas.FEL.json") #read in json
+filepath <- read_json("~/bin/mtDNA_redo/data/FEL/zeiformes-nd1-align-dna.fas.FEL.json") #read in json
 
 heads <- filepath$MLE$headers  %>% unlist() %>% .[c(TRUE,FALSE)] #get headers and ignore header descriptions
 ```
@@ -28,7 +30,7 @@ temp <- filepath$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE) %
 
 #kernel density and plots?
 ```{r}
-d_alpha <- density(temp$alpha)
+d_alpha <- density(temp$alpha, kernel = "gaussian")
 
 d_alpha %>% plot()
 
@@ -38,9 +40,9 @@ d_beta %>% plot()
 
 ```{r}
 #uses entropy library to calculate Kullback-Leibler divergence (KL) as it is needed to do the JSD
-# library("entropy")
-# 
-# KL.plugin(freqs1 = temp$alpha, freqs2 = temp$beta)
+library("entropy")
+
+KL.plugin(freqs1 = d_alpha$x, freqs2 = d_beta$x)
 ```
 
 ```{r}
@@ -50,6 +52,30 @@ JSD<- function(x,y) sqrt(0.5 * KLD(x, (x+y)/2) + 0.5 * KLD(y, (x+y)/2))
 
 KLD <- function(x,y) sum(x * log(x/y))
 
-JSD(temp$alpha, temp$beta)
+ dist.JSD <- function(inMatrix, pseudocount=0.000001, ...) {
+	KLD <- function(x,y) sum(x *log(x/y))
+	JSD<- function(x,y) sqrt(0.5 * KLD(x, (x+y)/2) + 0.5 * KLD(y, (x+y)/2))
+	matrixColSize <- length(colnames(inMatrix))
+	matrixRowSize <- length(rownames(inMatrix))
+	colnames <- colnames(inMatrix)
+	resultsMatrix <- matrix(0, matrixColSize, matrixColSize)
+        
+  inMatrix = apply(inMatrix,1:2,function(x) ifelse (x==0,pseudocount,x))
+
+	for(i in 1:matrixColSize) {
+		for(j in 1:matrixColSize) { 
+			resultsMatrix[i,j]=JSD(as.vector(inMatrix[,i]),
+			as.vector(inMatrix[,j]))
+		}
+	}
+	colnames -> colnames(resultsMatrix) -> rownames(resultsMatrix)
+	as.dist(resultsMatrix)->resultsMatrix
+	attr(resultsMatrix, "method") <- "dist"
+	return(resultsMatrix) 
+ }
+
+d.temp <- dist.JSD(temp)
+
+d.temp
 ```
 
