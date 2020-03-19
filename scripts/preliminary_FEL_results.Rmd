@@ -30,19 +30,54 @@ temp <- filepath$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE) %
 
 #kernel density and plots?
 ```{r}
-d_alpha <- density(temp$alpha, kernel = "gaussian")
+d_alpha <- density(log(temp$alpha), kernel = "gaussian", from = 0)
 
 d_alpha %>% plot()
 
-d_beta <- density(temp$beta) 
+d_beta <- density(log(temp$beta), from = 0)
 d_beta %>% plot()
+```
+
+
+#check a second alignment:
+
+```{r}
+filepath <- read_json("~/bin/mtDNA_redo/data/FEL/acipenseriformes-atp8-align-dna.fas.FEL.json") #read in json
+
+heads <- filepath$MLE$headers  %>% unlist() %>% .[c(TRUE,FALSE)] #get headers and ignore header descriptions
+```
+
+```{r}
+#get MLE contents and make them a data frame
+temp_2 <- filepath$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE) %>% as.data.frame() 
+#make the headers the variable names
+ names(temp_2)  <- heads
+```
+
+#kernel density and plots?
+```{r}
+d_alpha_2 <- density(log(temp_2$alpha), kernel = "gaussian", from = 0)
+
+d_alpha_2 %>% plot()
+
+d_beta_2 <- density(log(temp_2$beta), from = 0)
+d_beta_2 %>% plot()
 ```
 
 ```{r}
 #uses entropy library to calculate Kullback-Leibler divergence (KL) as it is needed to do the JSD
 library("entropy")
 
-KL.plugin(freqs1 = d_alpha$x, freqs2 = d_beta$x)
+KL <- KL.plugin(freqs1 = d_alpha$x, freqs2 = d_beta$x)
+KL_2 <- KL.plugin(freqs1 = d_alpha_2$x, freqs2 = d_beta_2$x)
+
+```
+```{r}
+#from slackoverflow https://stackoverflow.com/questions/11226627/jensen-shannon-divergence-in-r
+p <- d_beta_2$x
+q <- d_alpha_2$x
+n <- 0.5 * (p + q)
+JS <- 0.5 * (sum(p * log(p / n)) + sum(q * log(q / n)))
 ```
 
 ```{r}
@@ -51,6 +86,9 @@ KL.plugin(freqs1 = d_alpha$x, freqs2 = d_beta$x)
 JSD<- function(x,y) sqrt(0.5 * KLD(x, (x+y)/2) + 0.5 * KLD(y, (x+y)/2))
 
 KLD <- function(x,y) sum(x * log(x/y))
+
+KLD(d_beta_2$x, d_alpha_2$x)
+JSD(d_beta_2$x, d_alpha_2$x)
 
  dist.JSD <- function(inMatrix, pseudocount=0.000001, ...) {
 	KLD <- function(x,y) sum(x *log(x/y))
@@ -74,8 +112,14 @@ KLD <- function(x,y) sum(x * log(x/y))
 	return(resultsMatrix) 
  }
 
-d.temp <- dist.JSD(temp)
+
+```
+
+#calculate the JSD between alpha and beta
+```{r}
+d.temp <- dist.JSD(temp %>% select(alpha, beta))
 
 d.temp
 ```
+this gives me th JSD between the nonsynonymous (beta) and synonymous (alpha) rate distributions. 
 
