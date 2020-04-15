@@ -175,8 +175,21 @@ check that it works:
 JSD.calc(paste0(dir,FEL_jsons[1]))
 ```
 
-this returns a list of JSD calculations but unattached to file names, genes or orders.
+this returns a named number of JSD calculations 
 ```{r}
-lapply(FEL_jsons, JSD.calc)
+t <- sapply(FEL_jsons, JSD.calc)
+t
+```
+
+take that clean it up so you have gene, order, alpha/beta JSD.
+
+```{r}
+cleanup <- str_extract_all(names(t), "\\w+(?=-)", simplify = T)
+f <- tibble(order = cleanup[,1], gene = cleanup[,2], JSD_alpha_beta = t)
+```
+
+stopped here 
+```{r}
+hclust(f$JSD_alpha_beta) %>% plot()
 ```
 
