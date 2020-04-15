@@ -15,6 +15,8 @@ library(stringr)
 library(dplyr)
 ```
 
+# check one alignment
+## zeiformes nd1 FEL results
 ```{r}
 filepath <- read_json("~/bin/mtDNA_redo/data/FEL/zeiformes-nd1-align-dna.fas.FEL.json") #read in json
 
@@ -29,18 +31,24 @@ temp <- filepath$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE) %
 ```
 
 #kernel density and plots?
+##Kernel density and plot for alpha for single FEL result
 ```{r}
-d_alpha <- density(log(temp$alpha), kernel = "gaussian", from = 0)
+d_alpha <- density(log(temp$alpha), kernel = "gaussian", from = 0) #Kernel density for alpha rate estimation 
+#start from 0 and log transform to control outliers
 
-d_alpha %>% plot()
+d_alpha %>% plot() #plot the density 
+```
 
-d_beta <- density(log(temp$beta), from = 0)
-d_beta %>% plot()
+##Kernel density and plot for beta for single FEL result
+```{r}
+d_beta <- density(log(temp$beta), kernel = "gaussian", from = 0)  #Kernel density for the beta rate estimation
+
+d_beta %>% plot() #plot the density
 ```
 
 
 #check a second alignment:
-
+## acipenseriformes at8 FEL results
 ```{r}
 filepath <- read_json("~/bin/mtDNA_redo/data/FEL/acipenseriformes-atp8-align-dna.fas.FEL.json") #read in json
 
@@ -55,30 +63,37 @@ temp_2 <- filepath$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE)
 ```
 
 #kernel density and plots?
+##Kernel density and plot for alpha for single FEL result
 ```{r}
 d_alpha_2 <- density(log(temp_2$alpha), kernel = "gaussian", from = 0)
 
 d_alpha_2 %>% plot()
-
+```
+##Kernel density and plot for beta for single FEL result
+```{r}
 d_beta_2 <- density(log(temp_2$beta), from = 0)
 d_beta_2 %>% plot()
 ```
-
+#try different ways of calculating the KL or JSD
+##using the entropy library:
 ```{r}
 #uses entropy library to calculate Kullback-Leibler divergence (KL) as it is needed to do the JSD
 library("entropy")
 
 KL <- KL.plugin(freqs1 = d_alpha$x, freqs2 = d_beta$x)
 KL_2 <- KL.plugin(freqs1 = d_alpha_2$x, freqs2 = d_beta_2$x)
-
+#both of these return an error: Vanishing value(s) in argument freqs2!
 ```
+## Using a calculation from stackoverflow:
 ```{r}
-#from slackoverflow https://stackoverflow.com/questions/11226627/jensen-shannon-divergence-in-r
+#from stackoverflow https://stackoverflow.com/questions/11226627/jensen-shannon-divergence-in-r
 p <- d_beta_2$x
 q <- d_alpha_2$x
 n <- 0.5 * (p + q)
-JS <- 0.5 * (sum(p * log(p / n)) + sum(q * log(q / n)))
+JS <- 0.5 * (sum(p * log(p / n)) + sum(q * log(q / n))) #returns an NaN
 ```
+
+##Using a formula from a website:
 
 ```{r}
 #actually, lets try the way this site does it: https://enterotype.embl.de/enterotypes.html
@@ -115,11 +130,53 @@ JSD(d_beta_2$x, d_alpha_2$x)
 
 ```
 
-#calculate the JSD between alpha and beta
+###calculate the JSD between alpha and beta
 ```{r}
 d.temp <- dist.JSD(temp %>% select(alpha, beta))
 
 d.temp
 ```
-this gives me th JSD between the nonsynonymous (beta) and synonymous (alpha) rate distributions. 
+this last method works and gives me the JSD between the nonsynonymous (beta) and synonymous (alpha) rate distributions. 
+
+so now what if we want the distance for every FEL result?
+
+first, get list of all FEL results:
+
+```{r}
+dir <- "~/bin/mtDNA_redo/data/FEL"
+FEL_jsons <- list.files(path = dir,
+                      pattern = '*FEL.json', recursive = TRUE, full.names = TRUE)
+```
+
+ write function for JSD calculation:
+```{r}
+JSD.calc <- function(filename){
+  
+  results <- read_json(filename) #read in json
+
+  heads <- results$MLE$headers  %>% unlist() %>% .[c(TRUE,FALSE)] #get headers and ignore header descriptions
+  
+  #get MLE contents and make them a data frame
+  temp <- results$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE) %>% as.data.frame() 
+#make the headers the variable names
+  names(temp)  <- heads
+  
+#Kernel density for alpha rate estimation 
+#start from 0 and log transform to control outliers
+#  d_alpha <- density(log(temp$alpha), kernel = "gaussian", from = 0) 
+ # d_beta <- density(log(temp$beta), kernel = "gaussian", from = 0) 
+  
+  d.temp <- dist.JSD(temp %>% select(alpha, beta))
+  return(d.temp)
+}
+```
+check that it works:
+```{r}
+JSD.calc(paste0(dir,FEL_jsons[1]))
+```
+
+this returns a list of JSD calculations but unattached to file names, genes or orders.
+```{r}
+lapply(FEL_jsons, JSD.calc)
+```
 
