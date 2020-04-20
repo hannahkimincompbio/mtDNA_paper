@@ -1,0 +1,17 @@
+---
+title: "Heirarchical cluster tut"
+author: "sadie"
+date: "4/20/2020"
+output: html_document
+---
+ going through this tutorial and hoping to be able to apply to the FEL data:
+ 
+https://uc-r.github.io/hc_clustering
+
+```{r}
+library(tidyverse)  # data manipulation
+library(cluster)    # clustering algorithms
+library(factoextra) # clustering visualization
+library(dendextend) # for comparing two dendrograms
+```
+
