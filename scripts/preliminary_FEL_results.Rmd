@@ -172,7 +172,7 @@ JSD.calc <- function(filename){
 ```
 check that it works:
 ```{r}
-JSD.calc(paste0(dir,FEL_jsons[1]))
+#JSD.calc(paste0(dir,FEL_jsons[1]))
 ```
 
 this returns a named number of JSD calculations 
@@ -190,6 +190,6 @@ f <- tibble(order = cleanup[,1], gene = cleanup[,2], JSD_alpha_beta = t)
 
 stopped here 
 ```{r}
-hclust(f$JSD_alpha_beta) %>% plot()
+#hclust(f$JSD_alpha_beta) %>% plot()
 ```
 
