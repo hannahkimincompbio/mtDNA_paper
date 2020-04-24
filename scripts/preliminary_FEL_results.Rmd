@@ -13,6 +13,9 @@ library(jsonlite)
 library(stringr)
 
 library(dplyr)
+
+library(cluster)    # clustering algorithms
+library(factoextra) # clustering algorithms & visualization
 ```
 
 # check one alignment
@@ -210,6 +213,7 @@ t.1$d_alpha_var <- t.1$d_alpha_var %>% as.numeric()
 t.1$d_beta_var <- t.1$d_beta_var %>% as.numeric()
 cleannames<- t.1 %>% rownames()  %>% str_extract_all(., "\\w+(?=-)", simplify = T)
 rownames(t.1) <-paste(cleannames[,1], cleannames[,2], sep = "_")
+
 distance <- get_dist(t.1) #computes distance matrix, default is euclidean
 fviz_dist(distance, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07")) 
 ```
@@ -224,8 +228,8 @@ fviz_cluster(k2, data = t.1, labelsize = 8)
 take that clean it up so you have gene, order, alpha/beta JSD.
 
 ```{r}
-cleanup <- str_extract_all(names(t), "\\w+(?=-)", simplify = T)
-f <- tibble(order = cleanup[,1], gene = cleanup[,2], JSD_alpha_beta = t)
+# cleanup <- str_extract_all(names(t), "\\w+(?=-)", simplify = T)
+# f <- tibble(order = cleanup[,1], gene = cleanup[,2], JSD_alpha_beta = t)
 ```
 
 stopped here 
