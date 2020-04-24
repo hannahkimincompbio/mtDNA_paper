@@ -38,6 +38,15 @@ d_alpha <- density(log(temp$alpha), kernel = "gaussian", from = 0) #Kernel densi
 
 d_alpha %>% plot() #plot the density 
 ```
+what is the variability of the distribution?
+```{r}
+d_a_var <- d_alpha$x %>% var()
+
+# t.a <- temp$alpha
+# t.a[which(temp$alpha<=0)]  <- 0 
+# t.a[which(temp$alpha== -Inf)]  <- 0 
+#   log(t.a)%>% var()
+```
 
 ##Kernel density and plot for beta for single FEL result
 ```{r}
@@ -69,6 +78,11 @@ d_alpha_2 <- density(log(temp_2$alpha), kernel = "gaussian", from = 0)
 
 d_alpha_2 %>% plot()
 ```
+what is the variability of the distribution?
+```{r}
+d_a_2_var <- d_alpha_2$x %>% var()
+```
+
 ##Kernel density and plot for beta for single FEL result
 ```{r}
 d_beta_2 <- density(log(temp_2$beta), from = 0)
@@ -150,6 +164,7 @@ FEL_jsons <- list.files(path = dir,
 
  write function for JSD calculation:
 ```{r}
+d.temp <- NULL
 JSD.calc <- function(filename){
   
   results <- read_json(filename) #read in json
@@ -163,23 +178,48 @@ JSD.calc <- function(filename){
   
 #Kernel density for alpha rate estimation 
 #start from 0 and log transform to control outliers
-#  d_alpha <- density(log(temp$alpha), kernel = "gaussian", from = 0) 
- # d_beta <- density(log(temp$beta), kernel = "gaussian", from = 0) 
+   d_alpha <- density(log(temp$alpha), kernel = "gaussian", from = 0) 
+   d_beta <- density(log(temp$beta), kernel = "gaussian", from = 0) 
+   
+  d_alpha_var<- d_alpha$x %>% var() 
+  d_beta_var<- d_beta$x %>% var() 
+   
+  dist.temp <- dist.JSD(temp %>% select(alpha, beta))
+  d.temp <- cbind(d.temp, filename, dist.temp, d_alpha_var, d_beta_var)
   
-  d.temp <- dist.JSD(temp %>% select(alpha, beta))
   return(d.temp)
 }
 ```
 check that it works:
 ```{r}
-#JSD.calc(paste0(dir,FEL_jsons[1]))
+JSD.calc(paste0(FEL_jsons[1]))
 ```
 
 this returns a named number of JSD calculations 
 ```{r}
 t <- sapply(FEL_jsons, JSD.calc)
-t
+t %>% head()
+t <- t %>% t() 
+colnames(t) <- c("file", "dist.temp", "d_alpha_var", "d_beta_var")
+t.df<- t %>% as.data.frame()
 ```
+
+```{r}
+t.1 <- t.df %>% select(d_alpha_var, d_beta_var)
+t.1$d_alpha_var <- t.1$d_alpha_var %>% as.numeric()
+t.1$d_beta_var <- t.1$d_beta_var %>% as.numeric()
+cleannames<- t.1 %>% rownames()  %>% str_extract_all(., "\\w+(?=-)", simplify = T)
+rownames(t.1) <-paste(cleannames[,1], cleannames[,2], sep = "_")
+distance <- get_dist(t.1) #computes distance matrix, default is euclidean
+fviz_dist(distance, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07")) 
+```
+
+
+```{r}
+k2 <- kmeans(t.1, centers = 13, nstart = 25)
+fviz_cluster(k2, data = t.1, labelsize = 8)
+```
+
 
 take that clean it up so you have gene, order, alpha/beta JSD.
 
@@ -190,6 +230,7 @@ f <- tibble(order = cleanup[,1], gene = cleanup[,2], JSD_alpha_beta = t)
 
 stopped here 
 ```{r}
-#hclust(f$JSD_alpha_beta) %>% plot()
+# get_dist()
+# fviz_dist()
 ```
 

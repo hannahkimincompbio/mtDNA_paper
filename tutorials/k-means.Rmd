@@ -1,0 +1,34 @@
+---
+title: "Means tutorial"
+author: "sadie"
+date: "4/23/2020"
+output: html_document
+---
+
+following the tutorial here: http://uc-r.github.io/kmeans_clustering
+
+```{r}
+library(dplyr)  # data manipulation
+library(cluster)    # clustering algorithms
+library(factoextra) # clustering algorithms & visualization
+```
+
+```{r}
+df <- USArrests
+df <- na.omit(df) #remove missing values
+df <- scale(df) #standardize to make variable comparable 
+head(df)
+```
+
+```{r}
+distance <- get_dist(df) #computes distance matrix, default is euclidean
+fviz_dist(distance, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07")) #heatmap of distance matrix
+```
+```{r}
+k2 <- kmeans(df, centers = 2, nstart = 25)
+str(k2)
+```
+```{r}
+
+```
+
