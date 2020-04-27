@@ -218,10 +218,22 @@ distance <- get_dist(t.1) #computes distance matrix, default is euclidean
 fviz_dist(distance, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07")) 
 ```
 
-
+cluster with 13 clusters to see is gene groups emerge
 ```{r}
 k2 <- kmeans(t.1, centers = 13, nstart = 25)
 fviz_cluster(k2, data = t.1, labelsize = 8)
+```
+
+cluster with 25 clusters to see if order clusters emerge
+```{r}
+k2 <- kmeans(t.1, centers = 25, nstart = 25)
+fviz_cluster(k2, data = t.1, labelsize = 8)
+```
+don't notice anything
+
+## heirarchical clustering
+```{r}
+
 ```
 
 
