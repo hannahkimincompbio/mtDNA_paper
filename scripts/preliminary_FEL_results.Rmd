@@ -13,7 +13,7 @@ library(jsonlite)
 library(stringr)
 
 library(dplyr)
-
+library(purrr)
 library(cluster)    # clustering algorithms
 library(factoextra) # clustering algorithms & visualization
 ```
@@ -223,6 +223,19 @@ cluster with 13 clusters to see is gene groups emerge
 k2 <- kmeans(t.1, centers = 13, nstart = 25)
 fviz_cluster(k2, data = t.1, labelsize = 8)
 ```
+another way of plotting the k means clustering:
+
+```{r}
+t.1 %>%
+  as_tibble() %>%
+  mutate(cluster = k2$cluster,
+         gene_order = row.names(t.1)) %>%
+  ggplot(aes(d_alpha_var, d_beta_var, color = factor(cluster), label = gene_order)) +
+  geom_text()
+```
+
+
+
 
 cluster with 25 clusters to see if order clusters emerge
 ```{r}
@@ -230,6 +243,59 @@ k2 <- kmeans(t.1, centers = 25, nstart = 25)
 fviz_cluster(k2, data = t.1, labelsize = 8)
 ```
 don't notice anything
+
+### elbow method of finding clusters
+from this tutorial still http://uc-r.github.io/kmeans_clustering
+```{r}
+set.seed(123)
+
+# function to compute total within-cluster sum of square 
+wss <- function(k) {
+  kmeans(t.1, k, nstart = 10 )$tot.withinss
+}
+
+# Compute and plot wss for k = 1 to k = 15
+k.values <- 1:15
+
+# extract wss for 2-15 clusters
+wss_values <- map_dbl(k.values, wss)
+
+plot(k.values, wss_values,
+       type="b", pch = 19, frame = FALSE, 
+       xlab="Number of clusters K",
+       ylab="Total within-clusters sum of squares")
+
+##or this way:
+fviz_nbclust(t.1, kmeans, method = "wss")
+```
+looks like 4 is the best number of clusters by this method:
+```{r}
+k2 <- kmeans(t.1, centers = 4, nstart = 25)
+fviz_cluster(k2, data = t.1, labelsize = 8)
+```
+### average silloute method:
+
+```{r}
+fviz_nbclust(t.1, kmeans, method = "silhouette")
+```
+
+looks like 5 is the best number of clusters by this method:
+```{r}
+k2 <- kmeans(t.1, centers = 5, nstart = 25)
+fviz_cluster(k2, data = t.1 labelsize = 8)
+```
+### gap methond
+```{r}
+set.seed(123)
+gap_stat <- clusGap(t.1, FUN = kmeans, nstart = 25,
+                    K.max = 10, B = 50)
+# Print the result
+print(gap_stat, method = "firstmax")
+```
+
+```{r}
+fviz_gap_stat(gap_stat)
+```
 
 ## heirarchical clustering
 ```{r}
