@@ -14,6 +14,7 @@ library(stringr)
 
 library(dplyr)
 library(purrr)
+library(plyr)
 library(cluster)    # clustering algorithms
 library(factoextra) # clustering algorithms & visualization
 library(dendextend) # for comparing two dendrograms
@@ -359,21 +360,33 @@ invert <- read.delim("~/bin/mtDNA_redo/data/Invert-orders.txt", header = FALSE, 
 invert <- invert$V1 %>% paste(collapse = "|")
 is.invert <- ifelse(str_detect(labels(dend15), invert), 2, 3 )
 k_5 <- cutree(dend15,k = 5, order_clusters_as_data = FALSE)
+```
 
+```{r}
+library("colorspace")
+#hcl_palettes(plot = TRUE)
+```
+
+```{r}
 clean <- t.1.s %>% rownames() %>% str_split(pattern = "_", simplify= TRUE)
 
 t.1.s<- as.data.frame(t.1.s) %>% mutate(order = as.factor(clean[,1]), gene = as.factor(clean[,2])) %>% mutate_if(is.factor, as.numeric)
-order <- t.1.s$order
-gene <- t.1.s$gene
+
+q4 <- qualitative_hcl(max(t.1.s$order), palette = "Dynamic")
+q3 <- qualitative_hcl(max(t.1.s$gene), palette = "Pastel 1")
+order <- t.1.s$order %>% mapvalues(.,from = 1:61, to = q4)
+gene <- t.1.s$gene%>% mapvalues(.,from = 1:13, to = q3)
 ```
 
 
 ```{r}
-the_bars <- cbind(is.invert, k_5, order, gene)
+the_bars_1 <- cbind(is.invert, k_5)
+the_bars_2 <- cbind( order, gene)
 #the_bars[the_bars==2] <- 8
 
 dend15 %>%set("labels", "")  %>% plot()
-colored_bars(colors = the_bars, dend = dend15, sort_by_labels_order = FALSE, y_shift = -1)
+colored_bars(colors = the_bars_1, dend = dend15, y_shift = -1, sort_by_labels_order = FALSE)
+colored_bars(colors = the_bars_2, dend = dend15, y_shift = -5)
 ```
 
 take that clean it up so you have gene, order, alpha/beta JSD.
