@@ -16,6 +16,7 @@ library(dplyr)
 library(purrr)
 library(cluster)    # clustering algorithms
 library(factoextra) # clustering algorithms & visualization
+library(dendextend) # for comparing two dendrograms
 ```
 
 # check one alignment
@@ -201,7 +202,7 @@ JSD.calc(paste0(FEL_jsons[1]))
 this returns a named number of JSD calculations 
 ```{r}
 t <- sapply(FEL_jsons, JSD.calc)
-t %>% head()
+#t %>% head()
 t <- t %>% t() 
 colnames(t) <- c("file", "dist.temp", "d_alpha_var", "d_beta_var")
 t.df<- t %>% as.data.frame()
@@ -282,7 +283,7 @@ fviz_nbclust(t.1, kmeans, method = "silhouette")
 looks like 5 is the best number of clusters by this method:
 ```{r}
 k2 <- kmeans(t.1, centers = 5, nstart = 25)
-fviz_cluster(k2, data = t.1 labelsize = 8)
+fviz_cluster(k2, data = t.1, labelsize = 8)
 ```
 ### gap methond
 ```{r}
@@ -297,11 +298,83 @@ print(gap_stat, method = "firstmax")
 fviz_gap_stat(gap_stat)
 ```
 
-## heirarchical clustering
+# heirarchical clustering
 ```{r}
+t.1.s <- t.1 %>% scale()
+# Dissimilarity matrix
+d <- dist(t.1.s, method = "euclidean")
 
+# Hierarchical clustering using Complete Linkage
+hc1 <- hclust(d, method = "complete" )
+
+# Plot the obtained dendrogram
+plot(hc1, cex = 0.6, hang = -1)
+```
+use agnes to assess different clustering functions:
+
+```{r}
+# methods to assess
+m <- c( "average", "single", "complete", "ward")
+names(m) <- c( "average", "single", "complete", "ward")
+
+# function to compute coefficient
+ac <- function(x) {
+  agnes(t.1.s, method = x)$ac
+}
+
+map_dbl(m, ac)
+```
+see that ward is the strongest:
+```{r}
+hc3 <- agnes(t.1.s, method = "ward")
+pltree(hc3, cex = 0.6, hang = -1, main = "Dendrogram of agnes") 
 ```
 
+```{r}
+# Ward's method
+hc5 <- hclust(d, method = "ward.D2" )
+
+# Cut tree into 4 groups
+sub_grp <- cutree(hc5, k = 5)
+
+# Number of members in each cluster
+table(sub_grp)
+```
+
+```{r}
+plot(hc5, cex = 0.6)
+rect.hclust(hc5, k = 5, border = 2:5)
+```
+wanna see if I can color the labels by genes:
+taking a lot from: http://talgalili.github.io/dendextend/articles/dendextend.html#how-to-change-a-dendrogram-1
+```{r}
+#make a dendrogram 
+rownames(t.1.s) <- rownames(t.1.s) %>% toupper()
+dend15 <- t.1.s %>% dist() %>% hclust(method= "ward.D2")%>% as.dendrogram
+
+ labels(dend15) <- labels(dend15) %>% toupper()
+
+#plot(dend)
+invert <- read.delim("~/bin/mtDNA_redo/data/Invert-orders.txt", header = FALSE, sep = "\n", as.is = TRUE) 
+invert <- invert$V1 %>% paste(collapse = "|")
+is.invert <- ifelse(str_detect(labels(dend15), invert), 2, 3 )
+k_5 <- cutree(dend15,k = 5, order_clusters_as_data = FALSE)
+
+clean <- t.1.s %>% rownames() %>% str_split(pattern = "_", simplify= TRUE)
+
+t.1.s<- as.data.frame(t.1.s) %>% mutate(order = as.factor(clean[,1]), gene = as.factor(clean[,2])) %>% mutate_if(is.factor, as.numeric)
+order <- t.1.s$order
+gene <- t.1.s$gene
+```
+
+
+```{r}
+the_bars <- cbind(is.invert, k_5, order, gene)
+#the_bars[the_bars==2] <- 8
+
+dend15 %>%set("labels", "")  %>% plot()
+colored_bars(colors = the_bars, dend = dend15, sort_by_labels_order = FALSE, y_shift = -1)
+```
 
 take that clean it up so you have gene, order, alpha/beta JSD.
 
