@@ -210,6 +210,11 @@ t.df<- t %>% as.data.frame()
 ```
 
 ```{r}
+hist(as.numeric(t.df$dist.temp))
+```
+
+
+```{r}
 t.1 <- t.df %>% select(d_alpha_var, d_beta_var)
 t.1$d_alpha_var <- t.1$d_alpha_var %>% as.numeric()
 t.1$d_beta_var <- t.1$d_beta_var %>% as.numeric()
