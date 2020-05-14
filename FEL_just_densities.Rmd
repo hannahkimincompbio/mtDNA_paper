@@ -59,7 +59,7 @@ d_beta %>% plot() #plot the density
 
 
 #check a second alignment:
-## acipenseriformes at8 FEL results
+## acipenseriformes atp8 FEL results
 ```{r}
 filepath <- read_json("~/bin/mtDNA_redo/data/FEL/acipenseriformes-atp8-align-dna.fas.FEL.json") #read in json
 
@@ -138,12 +138,26 @@ x <- x %>% mutate(order = toupper(cleannames[,1]), gene = toupper(cleannames[,2]
 ```
 
 ```{r}
-x %>% filter(order == "ACIPENSERIFORMES") %>% ggplot() +geom_density(aes(x = log(alpha), color = gene))
+x %>% filter(order == "ACIPENSERIFORMES") %>% ggplot() +geom_density(aes(x = log(alpha), color = gene)) + xlim(0,9)
+```
+```{r}
+x %>% filter(order == "ACIPENSERIFORMES") %>% ggplot() +geom_density(aes(x = log(beta), color = gene)) + xlim(0,9)
+```
+
+```{r}
+x %>% filter(gene == "ATP8") %>% ggplot() +geom_density(aes(x = log(alpha), color = order)) + xlim(0,9) +guides(color = FALSE) + ylim(0,3)
 ```
 
 
 ```{r}
-x %>% ggplot() +geom_density(aes(x = log(alpha), color = gene)) + facet_wrap(vars(order), scales = "free")
+x %>% ggplot() +geom_density(aes(x = log(alpha), color = gene)) + facet_wrap(vars(order), scales = "free") + guides(color = FALSE)
+```
+```{r}
+x %>% ggplot() +geom_density(aes(x = log(alpha), color = order)) + facet_wrap(vars(gene), scales = "free") + guides(color = FALSE)
+```
+
+```{r}
+x %>% write.csv("mtDNA_FEL_results.csv")
 ```
 
 ## zeiformes atp6 FEL results
