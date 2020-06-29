@@ -1,0 +1,91 @@
+---
+title: "K-means_FEL"
+author: "sadie"
+date: "5/18/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(readr) # read csv
+library(dplyr)  # data manipulation
+library(cluster)    # clustering algorithms
+library(factoextra) # clustering algorithms & visualization
+library(ggtree)
+```
+
+```{r}
+df <- read_csv("./mtDNA_FEL_results.csv")
+order_gene <- paste(df$order, df$gene, sep = "_") %>% unique()
+```
+
+```{r}
+df_va<- df %>% group_by(filename) %>% dplyr::summarize(var_alpha = var(alpha), var_beta = var(beta)) %>% mutate(filename = basename(filename))
+rownames(df_va) <- df_va$filename
+df_va <- df_va %>% select(-filename)
+```
+
+```{r}
+df_va <- na.omit(df_va) #remove missing values
+df_va <- scale(df_va) #standardize to make variable comparable 
+```
+
+```{r}
+df_og <- df %>% group_by(order, gene) %>% tally()
+```
+
+
+```{r}
+distance <-df_va  %>%  get_dist() #computes distance matrix, default is euclidean
+fviz_dist(distance, gradient = list(low = "#00AFBB", mid = "white", high = "#FC4E07")) #heatmap of distance matrix
+```
+
+```{r}
+k2 <- kmeans(df_va, centers = 13, nstart = 25)
+fviz_cluster(k2, data = df_va)
+```
+
+
+```{r}
+df %>% ggplot() + geom_point(aes(x = beta, y = alpha, color = order))+ scale_x_log10() + scale_y_log10()
+```
+```{r}
+df %>% ggplot() + geom_point(aes(y = beta, x = alpha, color = order)) + scale_x_log10() + scale_y_log10()
+```
+```{r}
+df_va %>% as.data.frame() %>% ggplot() + geom_point(aes(y = var_beta, x = var_alpha, color = as.factor(k2$cluster), shape = df_og$gene )) + scale_x_log10() + scale_y_log10()
+```
+```{r}
+k5 <- kmeans(df_va, centers = 5, nstart = 25)
+fviz_cluster(k5, data = df_va)
+```
+
+
+```{r}
+df_va %>% as.data.frame() %>% ggplot() + geom_point(aes(y = var_beta, x = var_alpha, shape = as.factor(k5$cluster), color = df_og$gene )) 
+```
+```{r}
+df_va %>% as.data.frame() %>% ggplot() + geom_point(aes(y = var_beta, x = var_alpha, shape = as.factor(k5$cluster), color = df_og$order )) + scale_x_log10() + scale_y_log10()
+```
+
+
+```{r}
+tab <- table(k5$cluster, df_og$order)
+```
+
+```{r}
+tree_1 <- read.tree("data/phyliptree_order_class.phy")
+
+p <- ggtree(tree_1)
+```
+
+
+
+```{r}
+p2 <- facet_plot(p, panel="dot", data=as.data.frame(df_va), geom=geom_point, aes(x=val))
+```
+
+
+```{r}
+k3 <- kmeans(df_va, centers = 3, nstart = 25)
+fviz_cluster(k3, data = df_va)
+```

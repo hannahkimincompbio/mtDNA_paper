@@ -157,53 +157,12 @@ x %>% ggplot() +geom_density(aes(x = log(alpha), color = order)) + facet_wrap(va
 ```
 
 ```{r}
-x %>% write.csv("mtDNA_FEL_results.csv")
+#write to csv
+#x %>% write.csv("mtDNA_FEL_results.csv")
 ```
 
-## zeiformes atp6 FEL results
-```{r}
-filepath <- read_json("~/bin/mtDNA_redo/data/FEL/zeiformes-atp6-align-dna.fas.FEL.json") #read in json
-
-heads <- filepath$MLE$headers  %>% unlist() %>% .[c(TRUE,FALSE)] #get headers and ignore header descriptions
-```
 
 ```{r}
-#get MLE contents and make them a data frame
-temp <- filepath$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE) %>% as.data.frame() 
-#make the headers the variable names
- names(temp)  <- heads
+
 ```
 
-#kernel density and plots?
-##Kernel density and plot for alpha for single FEL result
-```{r}
-d_alpha_3 <- density(log(temp$alpha), kernel = "gaussian", from = 0) #Kernel density for alpha rate estimation 
-#start from 0 and log transform to control outliers
-
-plot(d_alpha_3) #plot the density
-lines(d_alpha)
-```
-
-## zeiformes atp6 FEL results
-```{r}
-filepath <- read_json("~/bin/mtDNA_redo/data/FEL/zeiformes-atp8-align-dna.fas.FEL.json") #read in json
-
-heads <- filepath$MLE$headers  %>% unlist() %>% .[c(TRUE,FALSE)] #get headers and ignore header descriptions
-```
-
-```{r}
-#get MLE contents and make them a data frame
-temp <- filepath$MLE$content$`0` %>% unlist %>% matrix(ncol = 6, byrow = TRUE) %>% as.data.frame() 
-#make the headers the variable names
- names(temp)  <- heads
-```
-
-#kernel density and plots?
-##Kernel density and plot for alpha for single FEL result
-```{r}
-d_alpha_4 <- density(log(temp$alpha), kernel = "gaussian", from = 0) #Kernel density for alpha rate estimation 
-#start from 0 and log transform to control outliers
-
-#plot(d_alpha_3) #plot the density
-#lines(d_alpha)
-```
